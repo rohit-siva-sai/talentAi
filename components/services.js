@@ -36,7 +36,7 @@ const Services = () => {
         <div>
           <picture>
             <img
-              src="https://img.freepik.com/free-vector/scientists-studying-neural-connections-programmers-writing-codes-machine-brain_74855-14157.jpg?w=996&t=st=1685380602~exp=1685381202~hmac=1c3fd5e39faefdd7ac40e4f9ffb503873233e2067c0fa75548ce89005b71a916"
+              src="https://d2mk45aasx86xg.cloudfront.net/AI_Services_f6eae42bac.svg"
               alt=""
               className="h-[500px]"
             />
