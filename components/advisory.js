@@ -3,7 +3,7 @@ import React from "react";
 const Advisory = () => {
   return (
     <div className="py-6">
-      <div className="grid grid-cols-2 px-24  align-middle ">
+      <div className="md:grid flex flex-col-reverse md:grid-cols-2 px-4 md:px-24  align-middle ">
         <div className="justify-self-start">
           <picture>
             <img
@@ -13,7 +13,7 @@ const Advisory = () => {
             />
           </picture>
         </div>
-        <div className=" pl-6 pr-32 self-center flex flex-col">
+        <div className=" md:pl-6 md:pr-32 self-center flex flex-col">
           <p className="font-semibold text-3xl text-gray-700 ">
             AI advisory services
           </p>

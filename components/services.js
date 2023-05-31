@@ -3,8 +3,8 @@ import React from "react";
 const Services = () => {
   return (
     <div className="py-6">
-      <div className="grid grid-cols-2 px-24 align-middle ">
-        <div className=" pr-48 self-center flex flex-col">
+      <div className="grid grid-cols-1  px-4 md:grid-cols-2 md:px-24 align-middle ">
+        <div className=" md:pr-48 self-center flex flex-col">
           <p className="font-semibold text-[40px] text-gray-800 ">
             The new standard in AI Services
           </p>
@@ -26,7 +26,7 @@ const Services = () => {
               placeholder="Your work email"
             />
             <div
-              className="px-5 text-white hover:opacity-90 bg-blue-500 cursor-pointer rounded-sm
+              className="md:px-5 px-2 md:text-base text-sm text-white hover:opacity-90 bg-blue-500 cursor-pointer rounded-sm
              py-2"
             >
               Talk to an Expert

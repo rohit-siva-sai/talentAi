@@ -3,8 +3,8 @@ import React from "react";
 const Aiaccelerator = () => {
   return (
     <div className="py-6">
-      <div className="grid grid-cols-2 px-24 align-middle ">
-        <div className=" pr-24 self-center flex flex-col">
+      <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-24 align-middle ">
+        <div className=" md:pr-24 self-center flex flex-col">
           <p className="font-semibold text-3xl text-gray-700 ">
             AI accelerator program
           </p>
@@ -16,7 +16,7 @@ const Aiaccelerator = () => {
           </p>
 
           <div
-            className="px-6 cursor-pointer w-fit text-white mt-10 bg-blue-500 rounded-md
+            className="px-6 cursor-pointer mx-auto md:mx-0 w-fit text-white mt-10 bg-blue-500 rounded-md
              py-2 text-sm hover:opacity-90"
           >
             Sign up to learn more
