@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Services from '@/components/services'
-import Company from '@/components/company'
-import Aiaccelerator from '@/components/aiaccelerator'
-import Advisory from '@/components/advisory'
-import Client from '@/components/client'
+import Services from '@/components/home/services'
+import Company from '@/components/home/company'
+import Aiaccelerator from '@/components/home/aiaccelerator'
+import Advisory from '@/components/home/advisory'
+import Client from '@/components/home/client'
 
 const inter = Inter({ subsets: ['latin'] })
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Company = () => {
@@ -7,7 +8,7 @@ const Company = () => {
         <span className="text-gray-800 ">For</span>&nbsp;Companies
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-24  align-middle ">
-        <div className="justify-self-start" >
+        <div className="justify-self-start">
           <picture>
             <img
               src="https://img.freepik.com/free-vector/cute-chatbot-greeting-people-isometric-icon-with-computer-various-objects-3d_1284-63055.jpg?w=740&t=st=1685382512~exp=1685383112~hmac=1b653bc09183d624f0388a99e3a09329a57fb26c3bb50f5278c41a0c60e507c5"
@@ -34,12 +35,14 @@ const Company = () => {
             an ROI framework
           </p>
 
-          <div
-            className="px-6 cursor-pointer mx-auto md:mx-0 w-fit text-white mt-10 hover:opacity-90 bg-blue-500 rounded-md
+          <Link href={"/hire_developers"}>
+            <div
+              className="px-6 cursor-pointer mx-auto md:mx-0 w-fit text-white mt-10 hover:opacity-90 bg-blue-500 rounded-md
              py-2 text-sm"
-          >
-            Sign up to learn more
-          </div>
+            >
+              Sign up to learn more
+            </div>
+          </Link>
         </div>
       </div>
     </div>
