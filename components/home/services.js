@@ -2,7 +2,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="py-6 border">
+    <div className="py-6 ">
       <div className="grid grid-cols-1  px-4 md:grid-cols-2 md:px-48 justify-items-start align-middle ">
         <div className="self-center md:w-[450px] flex flex-col">
           <p className="font-semibold text-[40px] text-gray-800 ">
@@ -26,7 +26,7 @@ const Services = () => {
               placeholder="Your work email"
             />
             <div
-              className="md:px-5 px-2 md:text-base text-sm text-white hover:opacity-90 bg-blue-500 cursor-pointer rounded-sm
+              className="md:px-5 px-2 md:text-base text-xs text-white hover:opacity-90 bg-blue-500 cursor-pointer rounded-sm
              py-2"
             >
               Talk to an Expert
