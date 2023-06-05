@@ -24,7 +24,7 @@ const array = [
 const Client = () => {
   return (
     <div>
-      <div className="bg-gray-100 px-4 py-8 md:px-24">
+      <div className="bg-gray-100 px-4 py-8 md:px-48">
         <p className="text-gray-800 font-semibold text-3xl">
           What clients say about Turing
         </p>
@@ -32,7 +32,7 @@ const Client = () => {
           900+ top comapnies have trusted Turing and the Talent Cloud for the
           engineering needs.
         </p>
-        <div className="grid md:grid-cols-3 gap-y-5 md:px-24 gap-x-8">
+        <div className="grid md:grid-cols-3 gap-y-5  gap-x-8">
           {array.map((item) => {
             return (
               <ClientSub
@@ -43,25 +43,25 @@ const Client = () => {
             );
           })}
         </div>
-        <div className="py-20 flex flex-col space-y-8 items-center" >
-        <p className="font-semibold ">
-          Ready to share your AI business needs?
-        </p>
-        <div className="flex">
-          <input
-            type="email"
-            name=""
-            id=""
-            className="outline-none border md:w-72 py-1 placeholder:text-sm text-gray-600 px-3 rounded border-gray-300 placeholder:text-gray-400"
-            placeholder="Your work email"
-          />
-          <div
-            className="md:px-5 px-2 text-white md:text-base text-sm bg-blue-500 cursor-pointer rounded
+        <div className="py-20 flex flex-col space-y-8 items-center">
+          <p className="font-semibold ">
+            Ready to share your AI business needs?
+          </p>
+          <div className="flex">
+            <input
+              type="email"
+              name=""
+              id=""
+              className="outline-none border md:w-72 py-1 placeholder:text-sm text-gray-600 px-3 rounded border-gray-300 placeholder:text-gray-400"
+              placeholder="Your work email"
+            />
+            <div
+              className="md:px-5 px-2 text-white md:text-base text-sm bg-blue-500 cursor-pointer rounded
              py-2"
-          >
-            Talk to an Expert
+            >
+              Talk to an Expert
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>

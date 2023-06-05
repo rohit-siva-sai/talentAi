@@ -3,17 +3,17 @@ import React from "react";
 const Advisory = () => {
   return (
     <div className="py-6">
-      <div className="md:grid flex flex-col-reverse md:grid-cols-2 px-4 md:px-24  align-middle ">
-        <div className="justify-self-start">
+      <div className="md:grid flex flex-col-reverse md:grid-cols-2 px-4 md:px-48 justify-items-start  align-middle ">
+        <div className="">
           <picture>
             <img
               src="https://d2mk45aasx86xg.cloudfront.net/Turing_Services_9913a8f414.svg"
               alt=""
-              className="h-[500px] "
+              className="h-[450px] "
             />
           </picture>
         </div>
-        <div className=" md:pl-6 md:pr-32 self-center flex flex-col">
+        <div className="   self-center justify-self-end flex flex-col">
           <p className="font-semibold text-3xl text-gray-700 ">
             AI advisory services
           </p>

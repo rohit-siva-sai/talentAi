@@ -13,7 +13,7 @@ const HireML = () => {
             leverage our AI-based Intelligent Talent Cloud to spin up your
             engineering team.
           </p>
-          <div className="flex  pt-2">
+          <div className="flex pt-2">
             <input
               type="email"
               name=""

@@ -2,9 +2,9 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="py-6">
-      <div className="grid grid-cols-1  px-4 md:grid-cols-2 md:px-24 align-middle ">
-        <div className=" md:pr-48 self-center flex flex-col">
+    <div className="py-6 border">
+      <div className="grid grid-cols-1  px-4 md:grid-cols-2 md:px-48 justify-items-start align-middle ">
+        <div className="self-center md:w-[450px] flex flex-col">
           <p className="font-semibold text-[40px] text-gray-800 ">
             The new standard in AI Services
           </p>
@@ -33,7 +33,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="justify-self-end">
           <picture>
             <img
               src="https://d2mk45aasx86xg.cloudfront.net/AI_Services_f6eae42bac.svg"
