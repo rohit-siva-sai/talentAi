@@ -2,7 +2,7 @@ import React from "react";
 
 const Hirenow = () => {
   return (
-    <div className="bg-gray-100 pt-10 pb-4 rounded-lg grid grid-cols-2 w-3/5 mx-auto">
+    <div className="bg-gray-100 pt-10 pb-4 rounded-lg grid md:grid-cols-2 grid-cols-1 md:w-3/5 md:px-0 md:gap-y-0 gap-y-6 px-4 mx-auto">
       <div className="flex flex-col space-y-2  justify-self-center">
         <p className="text-2xl text-gray-800 font-semibold" >Hire Ml engineers through <br /> Turing in 4 steps</p>
         <picture>

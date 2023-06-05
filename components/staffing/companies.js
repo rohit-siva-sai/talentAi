@@ -11,16 +11,16 @@ const array = [
 
 const Companies = () => {
   return (
-    <div className="pt-16" >
+    <div className="md:pt-16 pt-8" >
       <p className="text-gray-500 font-medium text-sm" >
         Join 900+ companies who have trusted Turing for their remote engineering
         needs.
       </p>
-      <div className="flex space-x-6 items-center pt-6 " >
+      <div className="flex md:space-x-6 space-x-3 items-center pt-6 " >
         {array.map((item) => {
           return (
             <picture>
-              <img src={item} alt="" className="w-full h-8" />
+              <img src={item} alt="" className="w-full md:h-8 h-6" />
             </picture>
           );
         })}

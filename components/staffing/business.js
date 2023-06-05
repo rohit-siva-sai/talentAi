@@ -8,7 +8,7 @@ const Business = () => {
   return (
     <div className="pt-12 pb-20" >
       <p className="text-2xl text-center font-semibold text-gray-800 " >Why businesses choose Turing</p>
-      <div className="flex justify-center items-center pb-14 pt-16 space-x-28">
+      <div className="flex md:flex-row flex-col md:justify-center md:items-center mx-auto w-fit space-y-6 md:space-y-0 items-start pb-14 pt-16 md:space-x-28">
         <div className=" flex flex-col space-y-4">
           <div className="flex items-center space-x-2">
             <div className="bg-green-100 p-2 rounded-lg ">

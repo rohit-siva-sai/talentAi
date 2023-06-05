@@ -8,9 +8,9 @@ import Offering5 from "./matter/offering5";
 
 const Offerings = () => {
   return (
-    <div className="md:px-52 px-4 py-12">
+    <div className="md:px-48 px-4 py-12">
      <p className="text-gray-800 text-3xl font-semibold ">Our AI service offerings</p>
-      <div className="pt-20 flex px-2 justify-between ">
+      <div className="pt-20 flex px-4 justify-between ">
         <div className="w-1/3  ">
           <div className="sticky top-8 py-4   left-36 h-fit hidden md:flex flex-col space-y-5">
             <Link href={"#1"}>

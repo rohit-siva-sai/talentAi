@@ -7,7 +7,7 @@ import React from 'react'
 
 const Hire_developers = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <HireML/>
       <Engineers/>
       <Business/>

@@ -3,10 +3,10 @@ import Companies from "./companies";
 
 const HireML = () => {
   return (
-    <div className="py-20 border" >
-      <div className="flex justify-center space-x-12">
-        <div className="w-[600px]">
-          <p className="text-5xl font-semibold text-gray-800" >Hire ML engineers remotely within 3-5 days</p>
+    <div className="py-20  md:px-0 px-4" >
+      <div className="flex md:flex-row flex-col md:justify-center md:space-y-0 space-y-10 md:space-x-12">
+        <div className="md:w-[600px]">
+          <p className="md:text-5xl text-3xl font-semibold text-gray-800" >Hire ML engineers remotely within 3-5 days</p>
           <p className="text-gray-600 pt-8 pb-8 " >
             Turing source engineers planet-wide and helps you hire the best
             remorte Ml engineers vetted for a Silicon Valley bar. Hire today and
@@ -18,11 +18,11 @@ const HireML = () => {
               type="email"
               name=""
               id=""
-              className="outline-none border py-1 placeholder:text-sm text-gray-600 px-3 rounded border-gray-300 placeholder:text-gray-400 w-64"
+              className="outline-none border py-1 placeholder:text-sm text-gray-600 px-3 rounded border-gray-300 placeholder:text-gray-400 w-52"
               placeholder="Your work email"
             />
             <div
-              className="md:px-5 px-2 md:text-base text-sm text-white hover:opacity-90 bg-blue-500 cursor-pointer rounded-sm
+              className="md:px-5 px-2 md:text-base text-xs text-white hover:opacity-90 bg-blue-500 cursor-pointer rounded-sm
              py-2"
             >
               Hire ML engineers now
