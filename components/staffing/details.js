@@ -52,7 +52,7 @@ const Details = ({
         <p className="pt-5 md:px-2 text-gray-700 text-sm font-medium">
           {matter}
         </p>
-        <div className="flex md:flex-row flex-col space-y-6 md:justify-between items-start md:items-center pt-5">
+        <div className="flex md:flex-row flex-col md:space-y-0 space-y-6 md:justify-between items-start md:items-center pt-5">
           <div className="flex flex-col space-y-2">
             <div className="flex items-center space-x-2 ">
               <AiFillStar className="text-amber-500" />
@@ -84,7 +84,7 @@ const Details = ({
               })}
             </div>
           </div>
-          <div className="flex  text-white h-10 cursor-pointer bg-blue-500 items-center space-x-1 px-3 py-0 rounded-md">
+          <div className="flex md:hidden  text-white h-10 cursor-pointer bg-blue-500 items-center space-x-1 px-3 py-0 rounded-md">
             Hire {name}
           </div>
         </div>

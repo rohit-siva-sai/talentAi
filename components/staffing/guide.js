@@ -11,9 +11,9 @@ const Guide = () => {
       </div>
       <div className='bg-gradient-to-r text-white  rounded-lg px-4 py-7  from-indigo-500 to-sky-500 '>
         <p>Turing  books $87M at a $1.1B valuation to help source, hire and manage engineers remotely.</p>
-        <div className='text-center' >
+        {/* <div className='text-center' >
             sddssdds
-        </div>
+        </div> */}
       </div>
       <div className='bg-gradient-to-r px-4 py-4 rounded-lg text-white  from-indigo-500 to-sky-500 '>
         <p>Here&#39;s what customers have to say about Turing</p>

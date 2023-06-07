@@ -5,7 +5,7 @@ const Services = () => {
     <div className="py-6 ">
       <div className="grid grid-cols-1  px-4 md:grid-cols-2 md:px-48 justify-items-start align-middle ">
         <div className="self-center md:w-[450px] flex flex-col">
-          <p className="font-semibold text-[40px] text-gray-800 ">
+          <p className="font-semibold text-4xl md:text-[40px] text-gray-800 ">
             The new standard in AI Services
           </p>
           <p className="text-gray-600 text-base pt-5">
