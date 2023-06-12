@@ -4,7 +4,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div className='sticky top-0 left-0 bg-white z-50'>
-      <div className='flex md:flex-row flex-col items-center space-y-2 md:space-y-0 md:justify-between md:items-center md:px-36 py-3 shadow-md  ' >
+      <div className='flex md:flex-row flex-col items-center space-y-2 md:space-y-0 md:justify-between md:items-center md:px-48 md:py-4 py-2 shadow-md  ' >
         <Link href={"/"}>
             <div className='uppercase font-semibold text-gray-700 text-2xl tracking-wider'>turing</div>
         </Link>
