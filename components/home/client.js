@@ -6,18 +6,21 @@ const array = [
     post: "HR Manager of a multimillion-dollar software solution provider",
     imgUrl:
       "https://d2mk45aasx86xg.cloudfront.net/software_solutions_242940f846.svg",
+    name: "HOLDEN CAULFIELD",
   },
   {
     text: "Our team had a great experience working with Turing to expand our growing company. Their platform and shortlisting process were extremely helpful and efficient for everyone involved.",
     post: "Tech Lead of a fast-scaling delivery optimization platform",
     imgUrl:
       "https://d2mk45aasx86xg.cloudfront.net/delivery_optimization_675027d1ce.svg",
+    name: "HOLDEN CAULFIELD",
   },
   {
     text: "We were very pleased to discover in Turing a reliable partner that understood our needs and addressed them with a very professional approach. Turing has helped us fill our open roles in a timely manner while providing talented people that were eager to jump in and help our business progress.",
     post: "HR Manager of a multimillion-dollar embedded payments company",
     imgUrl:
       "https://d2mk45aasx86xg.cloudfront.net/embedded_payments_c13112b086.svg",
+    name: "HOLDEN CAULFIELD",
   },
 ];
 
@@ -39,6 +42,7 @@ const Client = () => {
                 text={item.text}
                 post={item.post}
                 imgUrl={item.imgUrl}
+                name={item.name}
               />
             );
           })}
