@@ -20,7 +20,7 @@ const Offerings = () => {
       </p>
       <div className="pt-20 flex md:px-4 justify-between ">
         <div className="w-1/3  ">
-          <div className="sticky top-8 py-4   left-36 h-fit hidden md:flex flex-col  border-blue-500">
+          <div className="sticky top-16 py-4   left-36 h-fit hidden md:flex flex-col  border-blue-500">
             <Link
               href={"#1"}
               onClick={() => {

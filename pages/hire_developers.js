@@ -1,8 +1,8 @@
-import Business from '@/components/staffing/business'
-import Engineers from '@/components/staffing/engineers'
-import Footer from '@/components/staffing/footer'
-import HireML from '@/components/staffing/hireML'
-import Remote from '@/components/staffing/remote'
+import Business from '@/components/hire_developers/business'
+import Engineers from '@/components/hire_developers/engineers'
+import Footer from '@/components/hire_developers/footer'
+import HireML from '@/components/hire_developers/hireML'
+import Remote from '@/components/hire_developers/remote'
 import React from 'react'
 
 const Hire_developers = () => {
@@ -12,7 +12,7 @@ const Hire_developers = () => {
       <Engineers/>
       <Business/>
       <Remote/>
-      <Footer/>
+     
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Advisory = () => {
@@ -24,12 +25,14 @@ const Advisory = () => {
            Discover streamlined workflows, enhanced productivity, seamless integration, expert support, and continous improvement from the leader in Ai-driven development.
           </p>
 
+          <Link href={"/advisory"}>
           <div
             className="px-6 cursor-pointer w-fit text-white mt-10 bg-blue-500 rounded-md
            py-2 text-sm hover:opacity-90 "
           >
             Sign up to learn more
           </div>
+          </Link>
         </div>
       </div>
     </div>
