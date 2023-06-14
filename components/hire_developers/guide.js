@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Guide = () => {
@@ -7,7 +8,10 @@ const Guide = () => {
       <div className='bg-white px-4 py-4 flex flex-col space-y-3' >
         <p className='text-gray-700 font-semibold' >Ultimate guide to hire ML engineers in 2023</p>
         <p className='text-gray-500 font-semibold text-sm' >Worried about the hassles of hiring an ML engineer? Check this guide to know about skills to look for, interview questions and more!</p>
-        <div className='border border-blue-500 text-blue-500 px-4 py-1 w-fit rounded' >Read article</div>
+        <Link href={""}>
+        <div className='border cursor-pointer hover:bg-blue-50 border-blue-500 text-blue-500 px-4 py-1 w-fit rounded' >Read article</div>
+
+        </Link>
       </div>
       <div className='bg-gradient-to-r text-white  rounded-lg px-4 py-7  from-indigo-500 to-sky-500 '>
         <p>Turing  books $87M at a $1.1B valuation to help source, hire and manage engineers remotely.</p>

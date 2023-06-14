@@ -1,10 +1,13 @@
+import Link from "next/link";
 import React from "react";
 
 const Hirenow = () => {
   return (
     <div className="bg-gray-100 pt-10 pb-4 rounded-lg grid md:grid-cols-2 grid-cols-1 md:w-3/5 md:px-0 md:gap-y-0 gap-y-6 px-4 mx-auto">
       <div className="flex flex-col space-y-2  justify-self-center">
-        <p className="text-2xl text-gray-800 font-semibold" >Hire Ml engineers through <br /> Turing in 4 steps</p>
+        <p className="text-2xl text-gray-800 font-semibold">
+          Hire ML engineers through <br /> Turing in 4 steps
+        </p>
         <picture>
           <img
             src="https://peopleprofilers.com/wp-content/uploads/2021/07/employment-and-workpass.png"
@@ -66,9 +69,11 @@ const Hirenow = () => {
             </p>
           </div>
         </div>
-        <div className="text-white bg-blue-500 px-4 py-2 w-fit text-sm rounded ml-8" >
+        <Link href={""}>
+          <div className="text-white cursor-pointer bg-blue-500 px-4 py-2 w-fit text-sm rounded ml-8">
             Hire ML engineers now
-        </div>
+          </div>
+        </Link>
       </div>
     </div>
   );
