@@ -3,7 +3,7 @@ import Companies from "./companies";
 
 const HireML = () => {
   return (
-    <div className="py-20  md:px-0 px-4" >
+    <div className="md:py-20 py-6 md:px-0 px-4" >
       <div className="flex md:flex-row flex-col md:justify-center md:space-y-0 space-y-10 md:space-x-12">
         <div className="md:w-[600px]">
           <p className="md:text-5xl text-3xl font-semibold text-gray-800" >Hire ML engineers remotely within 3-5 days</p>
