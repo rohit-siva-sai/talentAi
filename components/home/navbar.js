@@ -19,7 +19,10 @@ const Navbar = () => {
             <Link href={"/advisory"}>
                 <div className='font-light text-xs md:text-base cursor-pointer hover:underline  underline-offset-8 transition-all duration-300 decoration-blue-500 decoration-2' >Explore services</div>
             </Link>
-            <Link href={""}>
+            <Link href={"/blog?category=all"}>
+                <div className='font-light text-xs md:text-base cursor-pointer hover:underline  underline-offset-8 transition-all duration-300 decoration-blue-500 decoration-2' >Blog</div>
+            </Link>
+            <Link href={"/login"}>
                 <div className='font-light text-xs md:text-base cursor-pointer hover:underline  underline-offset-8 transition-all duration-300 decoration-blue-500 decoration-2' >Login</div>
             </Link>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="md:py-4  py-6 ">
+    <div className="md:py-0 border  py-6 ">
       <div className="grid grid-cols-1  px-4 md:grid-cols-2 md:px-48 justify-items-start align-middle ">
         <div className="self-center md:w-[450px] flex flex-col">
           <p className="font-semibold text-4xl md:text-[40px] text-gray-800 ">
@@ -33,7 +33,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className="justify-self-end">
+        <div className="justify-self-end ">
           <picture>
             <img
               src="https://d2mk45aasx86xg.cloudfront.net/AI_Services_f6eae42bac.svg"
