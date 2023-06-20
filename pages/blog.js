@@ -13,9 +13,8 @@ const client = createClient({
 
 const Blog = ({ blog }) => {
   const router = useRouter();
-  console.log("sss", router.query.category);
+  // console.log("sss", router.query.category);
   const [blogs,setBlogs] = useState(blog)
-  
 
   useEffect(() => {
    
@@ -30,7 +29,7 @@ const Blog = ({ blog }) => {
   return (
     <div className="min-h-screen ">
       <Navbar />
-      <div className="grid grid-cols-3 py-12 gap-y-12  px-48 gap-x-6 ">
+      <div className="grid  grid-cols-1 md:grid-cols-3 py-12 gap-y-12 px-4  md:px-48 md:gap-x-6 ">
         {blogs.map((item) => {
           return (
             <Create
@@ -56,13 +55,7 @@ export const getServerSideProps = async (context) => {
   const query2 = `*[_type == "post"]`;
   const blog = await client.fetch(query2);
 
-  // const query = `*[_type == "features" && slug.current == '${slug}'][0] {...,heading->} {...,blogs[]->} {...,services[]->} {...,caseStudy->}
-  // {...,promise->} {...,resources[]->}`;
-  // // const query = `*[_type == "features"]    `;
-  // const blog = await client.fetch(query);
-
-  // const profileQuery = `*[_type == "profile"][0]`;
-  // const profile = await client.fetch(profileQuery);
+ 
 
   return {
     props: {
