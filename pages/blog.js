@@ -15,6 +15,7 @@ const Blog = ({ blog }) => {
   const router = useRouter();
   console.log("sss", router.query.category);
   const [blogs,setBlogs] = useState(blog)
+  
 
   useEffect(() => {
    
