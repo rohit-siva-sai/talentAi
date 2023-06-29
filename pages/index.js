@@ -5,6 +5,8 @@ import Company from '@/components/home/company'
 import Aiaccelerator from '@/components/home/aiaccelerator'
 import Advisory from '@/components/home/advisory'
 import Client from '@/components/home/client'
+import Head from 'next/head'
+import SEO from '@bradgarropy/next-seo'
 
 const inter = Inter({ subsets: ['latin'] })
 

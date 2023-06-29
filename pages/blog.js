@@ -2,6 +2,7 @@ import Create from "@/components/blog/create";
 import Navbar from "@/components/blog/navbar";
 import { createClient } from "@sanity/client";
 import { useRouter } from "next/router";
+import SEO from "@bradgarropy/next-seo";
 
 import React, { useEffect, useState } from "react";
 
@@ -14,20 +15,25 @@ const client = createClient({
 const Blog = ({ blog }) => {
   const router = useRouter();
   // console.log("sss", router.query.category);
-  const [blogs,setBlogs] = useState(blog)
+  const [blogs, setBlogs] = useState(blog);
 
   useEffect(() => {
-   
     const sea = blog.filter((item) => item.category === router.query.category);
-    setBlogs(sea)
-    if(router.query.category==="all")
-    {
-      setBlogs(blog)
+    setBlogs(sea);
+    if (router.query.category === "all") {
+      setBlogs(blog);
     }
   }, [router]);
 
   return (
     <div className="min-h-screen ">
+      <SEO
+        title="Blogs"
+        description="blogs for turing website"
+        keywords={["aihlp", ""]}
+
+        // twitter={{ card: "sdhgvds", site: "sdhcg", image: "/vercel.svg" }}
+      />
       <Navbar />
       <div className="grid  grid-cols-1 md:grid-cols-3 py-12 gap-y-12 px-4  md:px-48 md:gap-x-6 ">
         {blogs.map((item) => {
@@ -54,8 +60,6 @@ export const getServerSideProps = async (context) => {
 
   const query2 = `*[_type == "post"]`;
   const blog = await client.fetch(query2);
-
- 
 
   return {
     props: {

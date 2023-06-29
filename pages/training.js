@@ -6,16 +6,21 @@ import Expert from "@/components/training/expert";
 import Offerings from "@/components/training/offerings";
 import Solution from "@/components/training/solution";
 import React from "react";
+import SEO from "@bradgarropy/next-seo";
 
 const Training = () => {
   return (
     <div>
+      <SEO
+        title="Talent training programs"
+        description="helping comapnies with ai"
+        keywords={["aihlp", ""]}
+      />
       <Services />
       <Solution />
       <Offerings />
-      <Expert/>
-      <Remote/>
-    
+      <Expert />
+      <Remote />
     </div>
   );
 };

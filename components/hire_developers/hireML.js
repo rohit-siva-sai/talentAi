@@ -1,6 +1,8 @@
 import React from "react";
 import Companies from "./companies";
 
+
+
 const HireML = () => {
   return (
     <div className="md:py-20 py-6 md:px-0 px-4" >

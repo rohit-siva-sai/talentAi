@@ -1,6 +1,7 @@
 import { createClient } from "@sanity/client";
 import React from "react";
 import imageUrlBuilder from "@sanity/image-url";
+import SEO from "@bradgarropy/next-seo";
 
 const client = createClient({
   projectId: "qkq2pa17",
@@ -15,6 +16,13 @@ const Post = ({ blog }) => {
   // console.log("in slug", blog);
   return (
     <div className="min-h-screen">
+      <SEO
+        title={`${blog.title} blog`}
+        description="blogs for turing website"
+        keywords={["aihlp",""]}
+       
+        // twitter={{ card: "sdhgvds", site: "sdhcg", image: "/vercel.svg" }}
+      />
       <div className="grid grid-cols-1 md:grid-cols-7 md:gap-y-0 gap-y-6 pt-16 gap-x-6 place-items-start px-4 md:px-48">
         <div className=" col-span-3 flex flex-col space-y-5">
           <p className="uppercase font-semibold text-gray-600 tracking-wide">
