@@ -31,6 +31,7 @@ const Blog = ({ blog }) => {
         title="Blogs"
         description="blogs for turing website"
         keywords={["aihlp", ""]}
+        icon="/icon2.webp"
 
         // twitter={{ card: "sdhgvds", site: "sdhcg", image: "/vercel.svg" }}
       />

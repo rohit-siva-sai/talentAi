@@ -15,6 +15,7 @@ const Training = () => {
         title="Talent training programs"
         description="helping comapnies with ai"
         keywords={["aihlp", ""]}
+       
       />
       <Services />
       <Solution />

@@ -13,7 +13,7 @@ const Hire_developers = () => {
         title="hiring developers"
         description="hiring ML developers by their profile"
         keywords={["aihlp", ""]}
-        icon="/icon2.webp"
+      
         // twitter={{ card: "sdhgvds", site: "sdhcg", image: "/vercel.svg" }}
       />
       <HireML />

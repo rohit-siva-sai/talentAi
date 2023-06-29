@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
         title="Turing"
         description="helping comapnies with ai"
         keywords={["aihlp",""]}
-       
+        icon="/icon2.webp"
        
       />
 
