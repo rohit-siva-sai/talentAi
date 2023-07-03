@@ -3,7 +3,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="md:px-48 px-0  py-4 border-b border-gray-600">
+    <div className="md:px-48 px-0 overflow-x-hidden py-4 border-b border-gray-600">
       <div className="uppercase pl-2 text-sm md:text-base font-semibold text-gray-600 tracking-wide pb-1 md:pb-4">
         filter by category
       </div>
