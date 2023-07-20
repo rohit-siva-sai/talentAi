@@ -86,7 +86,7 @@ const array = [
 const Press = () => {
   return (
     <div className="md:px-48 px-4">
-      <div className="pt-0 md:pt-8 pb-12 border">
+      <div className="pt-0 md:pt-8 pb-12 ">
         <p className="text-lg font-medium text-center py-10 text-gray-600">
           WOW, PRESS.
         </p>

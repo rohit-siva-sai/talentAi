@@ -25,7 +25,7 @@ const array = [
 
 const Works = () => {
   return (
-    <div className="md:px-48 px-4 py-10 border">
+    <div className="md:px-48 px-4 py-10 ">
       <p className="text-center font-semibold text-4xl pb-24 md:text-5xl">How it works</p>
       <div className="grid grid-cols-1 gap-y-12 md:gap-y-0 md:grid-cols-3 gap-x-6">
         {array.map((item) => {

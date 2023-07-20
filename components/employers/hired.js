@@ -53,7 +53,7 @@ const array = [
 const Hired = () => {
   return (
     <div className="md:px-48 px-4">
-      <div className="pt-8 pb-12 border">
+      <div className="pt-8 pb-12 ">
         <p className="md:text-2xl text-xl font-medium text-center py-10 text-gray-600">Companies who've hired through interviewing.io</p>
         <div className="grid grid-cols-2 md:grid-cols-4 md:gap-y-2 gap-y-6">
           {array.map((item) => {
