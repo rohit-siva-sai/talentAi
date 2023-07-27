@@ -3,7 +3,20 @@ import Navbar from "@/components/home/navbar";
 import "@/styles/globals.css";
 import SEO from "@bradgarropy/next-seo";
 
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+
 export default function App({ Component, pageProps }) {
+  const [navShow, setNavShow] = useState(true);
+  const router = useRouter();
+  useEffect(() => {
+    let exempted = ["/in_build"];
+    if (exempted.includes(router.pathname)) {
+      setNavShow(false);
+    } else {
+      setNavShow(true);
+    }
+  }, [router]);
   return (
     <>
       <SEO
@@ -14,7 +27,7 @@ export default function App({ Component, pageProps }) {
        
       />
 
-      <Navbar />
+      {navShow && <Navbar />}
       <Component {...pageProps} />
       <Footer />
     </>
