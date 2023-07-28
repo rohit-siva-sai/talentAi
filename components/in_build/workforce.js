@@ -4,8 +4,8 @@ import React from "react";
 const Workforce = () => {
   return (
     <div className="py-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-48 justify-items-start align-middle ">
-        <div className="  self-center flex flex-col">
+      <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-48 justify-items-start align-top  ">
+        <div className="    flex flex-col">
           <p className="font-semibold text-3xl md:text-[40px] text-gray-800 leading-snug  md:leading-[52px] ">
             A new way to build your <br /> tech workforce
           </p>
