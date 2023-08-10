@@ -76,7 +76,7 @@ const Profiles = ({ developersData }) => {
             return (
               <ProfileCard
                 developer={developerData.developer}
-                education={developerData.education}
+                // education={developerData.education}
                 experience={developerData.experience}
                 identity={developerData.identity}
                 skills={developerData.skills}
@@ -132,8 +132,8 @@ export async function getServerSideProps(context) {
         developer,
         skills,
         experience,
-        identity,
-        education,
+        identity
+        
       };
       developersData.push(combinedData);
     }

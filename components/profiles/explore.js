@@ -4,7 +4,7 @@ import { MdLocationPin } from "react-icons/md";
 import { HiTrophy, HiAcademicCap } from "react-icons/hi2";
 import Skills from "./skills";
 
-const Explore = ({ developer, education, experience, skills }) => {
+const Explore = ({ developer,  experience, skills }) => {
   console.log("explore", developer);
 
   return (

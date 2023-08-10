@@ -7,7 +7,7 @@ import { Button, Drawer, Progress, Space } from "antd";
 
 const ProfileCard = ({
   developer,
-  education,
+  // education,
   experience,
   identity,
   skills,
