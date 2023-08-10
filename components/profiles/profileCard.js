@@ -9,7 +9,7 @@ const ProfileCard = ({
   developer,
   // education,
   experience,
-  identity,
+  // identity,
   skills,
 }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -102,9 +102,9 @@ const ProfileCard = ({
       >
         <Explore
           developer={developer}
-          education={education}
+          // education={education}
           experience={experience}
-          identity={identity}
+          // identity={identity}
           skills={skills}
         />
       </Drawer>

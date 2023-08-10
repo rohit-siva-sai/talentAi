@@ -17,15 +17,14 @@ const fetchAllDevelopersData = async () => {
       const { email } = developer;
       const skills = await Skills.find({ email });
       const experience = await Experience.findOne({ email });
-      const identity = await Identity.findOne({ email });
-      const education = await Education.findOne({ email });
+      // const identity = await Identity.findOne({ email });
+      // const education = await Education.findOne({ email });
 
       const combinedData = {
         developer,
         skills,
         experience,
-        identity,
-        education,
+        
       };
       developersData.push(combinedData);
     }
@@ -63,7 +62,7 @@ const Profiles = ({ developersData }) => {
           filterDeveloper={filterDeveloper}
         />
         {filterDeveloperData.length < 1 && (
-          <picture className="place-self-center col-span-9 ">
+          <picture className="place-self-center col-span-9 " >
             <img
               src="https://img.freepik.com/premium-photo/white-people-examines-folder_58466-2854.jpg"
               alt=""
@@ -78,7 +77,7 @@ const Profiles = ({ developersData }) => {
                 developer={developerData.developer}
                 // education={developerData.education}
                 experience={developerData.experience}
-                identity={developerData.identity}
+                // identity={developerData.identity}
                 skills={developerData.skills}
               />
             );
@@ -119,27 +118,9 @@ const Profiles = ({ developersData }) => {
 export async function getServerSideProps(context) {
   if (!mongoose.connections[0].readyState) {
     await mongoose.connect(process.env.MONGO_URI);
-    const developers = await Developer.find();
-    const developersData = [];
-    for (const developer of developers) {
-      const { email } = developer;
-      const skills = await Skills.find({ email });
-      const experience = await Experience.findOne({ email });
-      const identity = await Identity.findOne({ email });
-      // const education = await Education.findOne({ email });
-
-      const combinedData = {
-        developer,
-        skills,
-        experience,
-        identity
-        
-      };
-      developersData.push(combinedData);
-    }
   }
 
-  // const developersData = await fetchAllDevelopersData();
+  const developersData = await fetchAllDevelopersData();
 
   return {
     props: {
