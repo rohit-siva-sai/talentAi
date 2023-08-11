@@ -71,7 +71,7 @@ const Profiles = ({ developersData }) => {
           </picture>
         )}
         <div className="flex flex-col space-y-0 col-span-9 ">
-          {filterDeveloperData.map((developerData) => {
+          {/* {filterDeveloperData.map((developerData) => {
             return (
               <ProfileCard
                 developer={developerData.developer}
@@ -81,7 +81,7 @@ const Profiles = ({ developersData }) => {
                 skills={developerData.skills}
               />
             );
-          })}
+          })} */}
         </div>
       </div>
       {/* {developersData.map((developerData, index) => (
