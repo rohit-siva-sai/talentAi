@@ -4,11 +4,11 @@ import mongoose from "mongoose";
 
 const handler = async (req, res) => {
   
-      let developers = await Education.find();
-      console.log('ss',developers)
+      let dev = await Education.find();
+      console.log('ss',dev)
       
-      res.status(200).json(developers)
-      console.log('Fetched developers:', developers);
+      res.status(200).json(dev)
+      console.log('Fetched developers:', dev);
  
     res.status(500).json({ error: "An error occurred while fetching developers." });
   

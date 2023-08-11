@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const educationSchema = new mongoose.Schema(
+const EducationSchema = new mongoose.Schema(
   {
     degree: { type: String },
     education: { type: String },
@@ -12,7 +12,7 @@ const educationSchema = new mongoose.Schema(
   { timestamps: true, collection: "education" }
 );
 
-const Education = mongoose.model('Education', educationSchema);
+const Education = mongoose.model('Education', EducationSchema);
 
 module.exports = Education;
 // export default mongoose.models.Education || mongoose.model("Education", educationSchema);

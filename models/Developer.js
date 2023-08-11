@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const developerSchema = new mongoose.Schema(
+const DeveloperSchema = new mongoose.Schema(
   {
     email: { type: String, required: true, unique: true },
     photoURL: { type: String },
@@ -30,4 +30,4 @@ const developerSchema = new mongoose.Schema(
 mongoose.models = {};
 
 export default mongoose.models.Developer ||
-  mongoose.model("Developer", developerSchema);
+  mongoose.model("Developer", DeveloperSchema);
