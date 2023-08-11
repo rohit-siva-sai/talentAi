@@ -17,7 +17,7 @@ const Navbar = () => {
             </div>
           </Link>
 
-          <Link href={"/profiles"}>
+          <Link href={"/"}>
             <div
               className="px-8 font-semibold cursor-pointer w-fit text-white  hover:opacity-90 bg-blue-500 rounded-md
              py-2 text-sm"
