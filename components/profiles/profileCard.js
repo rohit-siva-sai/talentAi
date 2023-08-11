@@ -54,7 +54,7 @@ const ProfileCard = ({
             </div>
             <div className="flex w-fit ml-1 bg-white px-3 border-2 border-blue-700 rounded-xl space-x-1  opacity-70 items-center ">
               <AiFillThunderbolt className="text-blue-700" size={13} />
-              <p className="text-blue-700 text-sm">Available Now</p>
+              <p className="text-blue-700 text-sm">{developer.verified ? "verified": ""}</p>
             </div>
           </div>
           <div>symbol</div>

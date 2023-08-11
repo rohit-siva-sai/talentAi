@@ -9,6 +9,7 @@ import ProfileCard from "@/components/profiles/profileCard";
 import CategoryFilter from "@/components/profiles/categoryFilter";
 import { useEffect, useState } from "react";
 
+
 const fetchAllDevelopersData = async () => {
   try {
     const developers = await Developer.find();
@@ -36,14 +37,14 @@ const fetchAllDevelopersData = async () => {
 };
 
 const Profiles = ({ developersData }) => {
-  console.log("hgsachgsa", developersData);
+  // console.log("hgsachgsa", developersData);
   const [skills, setSkills] = useState([]);
   const [filterDeveloperData, setFilterDeveloperData] =
     useState(developersData);
   const fetchSkill = async (email) => {
     const data = await fetch("https://talent-ai-ochre.vercel.app/api/skill");
     const skill = await data.json();
-    console.log('sdsds',skill);
+    // console.log('sdsds',skill);
     
     setSkills(skill);
   };
@@ -54,7 +55,7 @@ const Profiles = ({ developersData }) => {
 
   useEffect(() => {
     fetchSkill()
-    console.log(skills,"sahxfashgvsahxgv")
+    // console.log(skills,"sahxfashgvsahxgv")
   },[developersData]);
   const [categoryFilter, setCategoryFilter] = useState("All Categories");
   const filterDeveloper = (role) => {
@@ -134,7 +135,7 @@ export async function getServerSideProps(context) {
   }
 
   const developersData = await fetchAllDevelopersData();
-
+ 
   return {
     props: {
       developersData: JSON.parse(JSON.stringify(developersData)),
