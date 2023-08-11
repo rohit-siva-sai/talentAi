@@ -10,9 +10,9 @@ let skillsSchema = new mongoose.Schema(
   { timestamps: true,collection: "skills" }
 );
 
-// const Skill = mongoose.model("Skill", skillsSchema, "skills");
+const Skill = mongoose.model("Skill", skillsSchema, "skills");
 
-// module.exports = Skill;
-export default mongoose.models.Skill ||
-  mongoose.model("Skill", skillsSchema);
+module.exports = Skill;
+// export default mongoose.models.Skill ||
+//   mongoose.model("Skill", skillsSchema);
 
