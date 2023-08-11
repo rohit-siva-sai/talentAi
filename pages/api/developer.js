@@ -14,7 +14,7 @@ const handler = async (req, res) => {
       console.log('Fetched developers:',dev);
     
   
-    res.status(500).json({ error: "An error occurred while fetching developers." });
+    // res.status(500).json({ error: "An error occurred while fetching developers." });
   
 };
 

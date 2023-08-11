@@ -8,9 +8,9 @@ const handler = async (req, res) => {
       console.log('ss',dev)
       
       res.status(200).json(dev)
-      console.log('Fetched developers:', dev);
+    //   console.log('Fetched developers:', dev);
  
-    res.status(500).json({ error: "An error occurred while fetching developers." });
+    // res.status(500).json({ error: "An error occurred while fetching developers." });
   
 };
 
