@@ -11,7 +11,7 @@ import Education from "@/models/Education";
 import mongoose from "mongoose";
 import Developer from "@/models/Developer";
 import Identity from "@/models/Identity";
-import Skills from "@/models/Skills";
+import Skills from "@/models/Skill";
 
 const Training = ({products}) => {
   // console.log('sss',products);

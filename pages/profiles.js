@@ -1,6 +1,6 @@
 // import connectDb from '@/middleware/mongoose';
 import Developer from "@/models/Developer";
-import Skills from "@/models/Skills";
+// import Skills from "@/models/Skills";
 // import Experience from "@/models/Experience";
 import Identity from "@/models/Identity";
 import Education from "@/models/Education";
@@ -14,17 +14,16 @@ const fetchAllDevelopersData = async () => {
     const developers = await Developer.find();
     const developersData = [];
     for (const developer of developers) {
-      const { email } = developer;
-      const skills = await Skills.find({ email });
+      // const { email } = developer;
+      // const skills = await Skills.find({ email });
       // const experience = await Experience.findOne({ email });
       // const identity = await Identity.findOne({ email });
       // const education = await Education.findOne({ email });
 
       const combinedData = {
         developer,
-        skills,
+        // skills,
         // experience,
-        
       };
       developersData.push(combinedData);
     }
@@ -38,8 +37,25 @@ const fetchAllDevelopersData = async () => {
 
 const Profiles = ({ developersData }) => {
   console.log("hgsachgsa", developersData);
+  const [skills, setSkills] = useState([]);
   const [filterDeveloperData, setFilterDeveloperData] =
     useState(developersData);
+  const fetchSkill = async (email) => {
+    const data = await fetch("http://localhost:3000/api/skills");
+    const skill = await data.json();
+    console.log('sdsds',skill);
+    
+    setSkills(skill);
+  };
+  const filterSkill = (email) => {
+    const data = skills.filter((item) => item.email === email);
+    return data;
+  };
+
+  useEffect(() => {
+    fetchSkill()
+    console.log(skills,"sahxfashgvsahxgv")
+  },[developersData]);
   const [categoryFilter, setCategoryFilter] = useState("All Categories");
   const filterDeveloper = (role) => {
     if (role == "All categories") {
@@ -50,9 +66,6 @@ const Profiles = ({ developersData }) => {
     const data = developersData.filter((item) => item.developer.role === role);
     setFilterDeveloperData(data);
   };
-  // useEffect(()=>{
-  //   filterDeveloper()
-  // },[categoryFilter])
 
   return (
     <div className="px-48 py-8 min-h-screen ">
@@ -62,7 +75,7 @@ const Profiles = ({ developersData }) => {
           filterDeveloper={filterDeveloper}
         />
         {filterDeveloperData.length < 1 && (
-          <picture className="place-self-center col-span-9 " >
+          <picture className="place-self-center col-span-9 ">
             <img
               src="https://img.freepik.com/premium-photo/white-people-examines-folder_58466-2854.jpg"
               alt=""
@@ -71,17 +84,17 @@ const Profiles = ({ developersData }) => {
           </picture>
         )}
         <div className="flex flex-col space-y-0 col-span-9 ">
-          {/* {filterDeveloperData.map((developerData) => {
+          {filterDeveloperData.map((developerData) => {
             return (
               <ProfileCard
                 developer={developerData.developer}
                 // education={developerData.education}
                 // experience={developerData.experience}
                 // identity={developerData.identity}
-                skills={developerData.skills}
+                skills={filterSkill(developerData.developer.email)}
               />
             );
-          })} */}
+          })}
         </div>
       </div>
       {/* {developersData.map((developerData, index) => (
