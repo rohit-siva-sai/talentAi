@@ -1,7 +1,7 @@
 // import connectDb from '@/middleware/mongoose';
 import Developer from "@/models/Developer";
 import Skills from "@/models/Skills";
-import Experience from "@/models/Experience";
+// import Experience from "@/models/Experience";
 import Identity from "@/models/Identity";
 import Education from "@/models/Education";
 import mongoose from "mongoose";
@@ -16,14 +16,14 @@ const fetchAllDevelopersData = async () => {
     for (const developer of developers) {
       const { email } = developer;
       const skills = await Skills.find({ email });
-      const experience = await Experience.findOne({ email });
+      // const experience = await Experience.findOne({ email });
       // const identity = await Identity.findOne({ email });
       // const education = await Education.findOne({ email });
 
       const combinedData = {
         developer,
         skills,
-        experience,
+        // experience,
         
       };
       developersData.push(combinedData);
@@ -37,7 +37,7 @@ const fetchAllDevelopersData = async () => {
 };
 
 const Profiles = ({ developersData }) => {
-  console.log("hgsachgsa", developersData[6].skills);
+  console.log("hgsachgsa", developersData);
   const [filterDeveloperData, setFilterDeveloperData] =
     useState(developersData);
   const [categoryFilter, setCategoryFilter] = useState("All Categories");
@@ -76,7 +76,7 @@ const Profiles = ({ developersData }) => {
               <ProfileCard
                 developer={developerData.developer}
                 // education={developerData.education}
-                experience={developerData.experience}
+                // experience={developerData.experience}
                 // identity={developerData.identity}
                 skills={developerData.skills}
               />

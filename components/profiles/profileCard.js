@@ -8,7 +8,7 @@ import { Button, Drawer, Progress, Space } from "antd";
 const ProfileCard = ({
   developer,
   // education,
-  experience,
+  // experience,
   // identity,
   skills,
 }) => {
@@ -45,7 +45,7 @@ const ProfileCard = ({
                   {developer.userName}
                 </p>
                 <p className="font-normal text-gray-700 text-sm">
-                  {experience?.companyName}
+                  {developer?.role}
                 </p>
                 <p className="font-medium text-gray-500 text-sm">
                   {developer.country}
@@ -103,7 +103,7 @@ const ProfileCard = ({
         <Explore
           developer={developer}
           // education={education}
-          experience={experience}
+          // experience={experience}
           // identity={identity}
           skills={skills}
         />
