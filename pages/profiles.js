@@ -41,7 +41,7 @@ const Profiles = ({ developersData }) => {
   const [filterDeveloperData, setFilterDeveloperData] =
     useState(developersData);
   const fetchSkill = async (email) => {
-    const data = await fetch("http://localhost:3000/api/skills");
+    const data = await fetch("https://talent-ai-ochre.vercel.app/api/skill");
     const skill = await data.json();
     console.log('sdsds',skill);
     
