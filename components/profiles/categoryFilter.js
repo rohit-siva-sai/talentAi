@@ -64,7 +64,7 @@ const CategoryFilter = ({CategoryFilter,filterDeveloper}) => {
 
 
   return (
-    <div className="col-span-3  px-2">
+    <div className="col-span-3 sticky top-28  px-2">
       <p className="font-semibold text-gray-600 text-lg mb-4">Filter By</p>
       <div
         className={`flex border-y bg-white overflow-hidden transition-transform duration-500 flex-col ${

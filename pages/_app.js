@@ -1,5 +1,6 @@
 import Footer from "@/components/hire_developers/footer";
-import Navbar from "@/components/home/navbar";
+import Navbar from "@/components/in_build/navbar";
+// import Navbar from "@/components/home/navbar";
 import "@/styles/globals.css";
 import SEO from "@bradgarropy/next-seo";
 

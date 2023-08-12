@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { AiFillThunderbolt } from "react-icons/ai";
+import { AiFillThunderbolt,AiOutlineHeart,AiFillHeart } from "react-icons/ai";
 import { TbBadgeFilled } from "react-icons/tb";
 import Skills from "./skills";
 import Explore from "./explore";
 import { Button, Drawer, Progress, Space } from "antd";
+import Link from "next/link";
 
 const ProfileCard = ({
   developer,
@@ -14,6 +15,7 @@ const ProfileCard = ({
 }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [open, setOpen] = useState(false);
+  const [like,setLike] = useState(false)
   const [placement, setPlacement] = useState("right");
   const showDrawer = () => {
     setOpen(!open);
@@ -57,7 +59,17 @@ const ProfileCard = ({
               <p className="text-blue-700 text-sm">{developer.verified ? "verified": ""}</p>
             </div>
           </div>
-          <div>symbol</div>
+          <div className="flex items-center space-x-3">
+            <div className="border border-gray-400 rounded-full w-fit p-1" onClick={()=>{setLike(true)}} >
+                 {!like ?<AiOutlineHeart className="text-lime-600" />:<AiFillHeart className="text-lime-500" />}
+            </div>
+            <Link href={"https://client-a550d.web.app/"}>
+              <div className="px-4 md:px-4 cursor-pointer border border-lime-500 mx-auto md:mx-0 w-fit text-lime-700  hover:text-white  hover:bg-lime-600 rounded-md
+             py-1 text-sm hover:opacity-90">
+                hire now
+              </div>
+            </Link>
+          </div>
         </div>
         <div className="flex justify-between ml-2">
           <p className="font-semibold text-[15px]  text-gray-500">

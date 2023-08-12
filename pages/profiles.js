@@ -9,7 +9,6 @@ import ProfileCard from "@/components/profiles/profileCard";
 import CategoryFilter from "@/components/profiles/categoryFilter";
 import { useEffect, useState } from "react";
 
-
 const fetchAllDevelopersData = async () => {
   try {
     const developers = await Developer.find();
@@ -45,7 +44,7 @@ const Profiles = ({ developersData }) => {
     const data = await fetch("https://talent-ai-ochre.vercel.app/api/skill");
     const skill = await data.json();
     // console.log('sdsds',skill);
-    
+
     setSkills(skill);
   };
   const filterSkill = (email) => {
@@ -56,7 +55,7 @@ const Profiles = ({ developersData }) => {
   useEffect(() => {
     fetchSkill()
     // console.log(skills,"sahxfashgvsahxgv")
-  },[developersData]);
+  }, [developersData]);
   const [categoryFilter, setCategoryFilter] = useState("All Categories");
   const filterDeveloper = (role) => {
     if (role == "All categories") {
@@ -69,12 +68,14 @@ const Profiles = ({ developersData }) => {
   };
 
   return (
-    <div className="px-48 py-8 min-h-screen ">
-      <div className="grid grid-cols-12 gap-x-1 ">
-        <CategoryFilter
-          categoryFilter={categoryFilter}
-          filterDeveloper={filterDeveloper}
-        />
+    <div className="px-48 py-8 min-h-screen relative">
+      <div className="grid grid-cols-12 gap-x-1  ">
+        <div className="col-span-3">
+          <CategoryFilter
+            categoryFilter={categoryFilter}
+            filterDeveloper={filterDeveloper}
+          />
+        </div>
         {filterDeveloperData.length < 1 && (
           <picture className="place-self-center col-span-9 ">
             <img
@@ -135,7 +136,7 @@ export async function getServerSideProps(context) {
   }
 
   const developersData = await fetchAllDevelopersData();
- 
+
   return {
     props: {
       developersData: JSON.parse(JSON.stringify(developersData)),

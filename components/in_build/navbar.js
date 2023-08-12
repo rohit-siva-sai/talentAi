@@ -11,7 +11,7 @@ const Navbar = () => {
         </Link>
 
         <div className="flex justify-center items-center space-x-4 md:space-x-8">
-          <Link href={"/blog"}>
+          <Link href={"/blog?category=all"}>
             <div className="font-light  text-[13px] md:text-base cursor-pointer hover:underline  underline-offset-8 transition-all duration-300 decoration-blue-500 decoration-2">
               Blog
             </div>
