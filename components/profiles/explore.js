@@ -24,13 +24,13 @@ const Explore = ({ developer, skills }) => {
             </div>
           </Link>
         </div>
-        <div className="flex flex-col space-y-4 border-2 px-4 py-4 rounded-lg">
+        <div className="flex flex-col space-y-4 border-2 md:px-4 px-2 py-2 md:py-4 rounded-lg">
           <div className="flex justify-between items-start border-2 px-4 py-3 rounded-lg">
             <div className="flex space-x-6 items-center">
               <picture>
                 <img
                   src={developer.userImage}
-                  className="rounded-full w-28 h-28 "
+                  className="rounded-full w-20 h-20 md:w-28 md:h-28 "
                   alt=""
                 />
               </picture>
@@ -53,9 +53,9 @@ const Explore = ({ developer, skills }) => {
                 </div>
               </div>
             </div>
-            <div className="flex space-x-2 rounded-xl border text-gray-700 bg-green-100 px-3 py-1 ">
+            <div className="hidden md:flex space-x-2 rounded-xl border  text-gray-700 bg-green-100 px-3 py-1 ">
               <HiTrophy size={18} className="text-yellow-400" />
-              <p>Suggested match</p>
+              <p className="text-xs md:text-base">Suggested match</p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-x-3">

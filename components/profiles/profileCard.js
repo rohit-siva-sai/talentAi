@@ -23,20 +23,21 @@ const ProfileCard = ({
   const onChange = (e) => {
     setPlacement(e.target.value);
   };
+  
   // const onClose = () => {
   //   setOpen(false);
   // };
   return (
     <div onClick={showDrawer}>
-      <div className=" border px-6  flex flex-col space-y-4 py-4  cursor-pointer hover:bg-gray-100">
-        <div className="flex justify-between items-center">
+      <div className=" border md:px-6  px-2 flex flex-col space-y-4 py-3 md:py-4  cursor-pointer hover:bg-gray-100">
+        <div className="flex justify-between items-start md:items-center">
           <div className="flex flex-col space-y-2">
-            <div className="flex space-x-3 items-center">
+            <div className="flex space-x-3 md:space-x-3 items-center">
               <div className="relative">
                 <picture>
                   <img
                     src={developer.userImage}
-                    className="rounded-full w-[70px] h-[70px] border"
+                    className="rounded-full md:w-[70px] w-[60px] h-[60px] md:h-[70px] border"
                     alt=""
                   />
                 </picture>
@@ -46,10 +47,10 @@ const ProfileCard = ({
                 <p className="font-semibold text-lime-600 text-sm">
                   {developer.userName}
                 </p>
-                <p className="font-normal text-gray-700 text-sm">
+                <p className="font-normal text-gray-700 text-xs md:text-sm">
                   {developer?.role}
                 </p>
-                <p className="font-medium text-gray-500 text-sm">
+                <p className="font-medium text-gray-500 text-xs  md:text-sm">
                   {developer.country}
                 </p>
               </div>
@@ -71,7 +72,7 @@ const ProfileCard = ({
             </Link>
           </div>
         </div>
-        <div className="flex justify-between ml-2">
+        <div className=" md:flex hidden  justify-between ml-2">
           <p className="font-semibold text-[15px]  text-gray-500">
             <span className="text-gray-700">$5.00</span>/hr
           </p>
