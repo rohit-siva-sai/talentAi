@@ -33,8 +33,8 @@ const Download = () => {
     try {
       await setDoc(doc(userCollection), {
         firstName: updateUser.firstName,
-        lastName: updateUser.firstName,
-        workEmail: updateUser.firstName,
+        lastName: updateUser.lastName,
+        workEmail: updateUser.workEmail,
         companySize: updateUser.companySize,
         headquarters: updateUser.headquarters,
       });
