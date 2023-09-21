@@ -35,7 +35,7 @@ const Navbar = () => {
           } md:flex flex-col md:flex-row  md:shadow-none md:space-y-0 md:border-none md:items-center  md:space-x-16`}
         >
           <div
-            className={`flex space-y-4 md:space-y-0  flex-col md:flex-row items-start md:items-center md:space-x-8  `}
+            className={`flex space-y-5 md:space-y-0  flex-col md:flex-row items-start md:items-center md:space-x-8  `}
           >
             <div
               className="w-fit md:hidden block ml-auto"
