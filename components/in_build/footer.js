@@ -1,9 +1,21 @@
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 
 const Footer = () => {
+  const [showFooter, setShowFooter] = useState(true);
+  const router = useRouter();
+  useEffect(() => {
+    let exempted = ["/via"];
+    if (exempted.includes(router.pathname)) {
+      setShowFooter(false);
+    } else {
+      setShowFooter(true);
+    }
+  }, [router]);
   return (
-    <div className="bg-gray-950  py-12 px-4 ">
+   <div>
+    {showFooter && <div className="bg-gray-950  py-12 px-4 ">
       <div className="flex md:flex-row flex-col justify-center md:space-y-0 md:space-x-36  space-y-8 ">
         <Link href={"/"}>
           <div className="text-3xl text-white tracking-wider font-semibold">
@@ -97,7 +109,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div>}
+   </div>
   );
 };
 

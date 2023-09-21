@@ -1,10 +1,21 @@
 import Link from "next/link";
+import { useState } from "react";
 
 
 const Navbar = () => {
+  const [showNavbar,setShowNavbar] = useState()
+  useEffect(() => {
+    let exempted = ["/"];
+    if (exempted.includes(router.pathname)) {
+      setShowNavbar(false);
+    } else {
+      setShowNavbar(true);
+    }
+  }, [router]);
  
   return (
-    <div className="sticky top-0 border left-0 bg-white z-50">
+    <div>
+    {!showNavbar && <div className="sticky top-0 border left-0 bg-white z-50">
       <div className="flex md:flex-row flex-col items-center space-y-2 md:space-y-0 md:justify-between md:items-center md:px-48 md:py-4 py-2 shadow-md justify-center  ">
         <Link href={"/"}>
           <div className="uppercase font-semibold text-gray-700 text-2xl tracking-wider">
@@ -43,7 +54,9 @@ const Navbar = () => {
             </Link> */}
         </div>
       </div>
+    </div>}
     </div>
+   
   );
 };
 

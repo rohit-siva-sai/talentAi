@@ -1,4 +1,5 @@
-import Footer from "@/components/hire_developers/footer";
+
+import Footer from "@/components/in_build/footer";
 import Navbar from "@/components/in_build/navbar";
 // import Navbar from "@/components/home/navbar";
 import "@/styles/globals.css";
