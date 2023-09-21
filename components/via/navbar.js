@@ -30,12 +30,12 @@ const Navbar = () => {
         <div
           className={`${
             showNav
-              ? "flex  absolute top-0 py-12 px-12 md:py-0 left-0 bg-white w-full md:flex-row flex-col shadow-md space-y-10 border-b"
+              ? "flex  absolute top-0 py-8 px-12 md:py-0 left-0 bg-white w-full md:flex-row flex-col shadow-md space-y-16 border-b"
               : "hidden"
-          } md:flex flex-col md:flex-row md:shadow-none md:space-y-0 md:border-none md:items-center  md:space-x-16`}
+          } md:flex flex-col md:flex-row  md:shadow-none md:space-y-0 md:border-none md:items-center  md:space-x-16`}
         >
           <div
-            className={`flex space-y-4 md:space-y-0    flex-col md:flex-row items-start md:items-center md:space-x-8  `}
+            className={`flex space-y-4 md:space-y-0  flex-col md:flex-row items-start md:items-center md:space-x-8  `}
           >
             <div
               className="w-fit md:hidden block ml-auto"
@@ -51,7 +51,7 @@ const Navbar = () => {
                 setDropDown(!dropDown);
               }}
             >
-              <p className="group-hover:text-blue-500 text-lg  md:text-[15px] text-gray-700">
+              <p className="group-hover:text-blue-500 text-xl  md:text-[15px] text-gray-700">
                 How it works
               </p>
               <MdKeyboardArrowDown
@@ -62,7 +62,7 @@ const Navbar = () => {
               />
             </div>
             <Link href={""}>
-              <div className="hover:text-blue-500 text-lg md:text-[15px]  text-gray-700 font-normal">
+              <div className="hover:text-blue-500 text-xl md:text-[15px]  text-gray-700 font-normal">
                 Countries
               </div>
             </Link>
@@ -72,7 +72,7 @@ const Navbar = () => {
                 setDropDown(!dropDown);
               }}
             >
-              <p className="group-hover:text-blue-500 text-lg   md:text-[15px] text-gray-700">
+              <p className="group-hover:text-blue-500 text-xl md:text-[15px] text-gray-700">
                 About Us
               </p>
               <MdKeyboardArrowDown
@@ -83,32 +83,32 @@ const Navbar = () => {
               />
             </div>
             <Link href={""}>
-              <div className="hover:text-blue-500 text-lg   md:text-[15px] text-gray-700 font-normal">
+              <div className="hover:text-blue-500 text-xl md:text-[15px] text-gray-700 font-normal">
                 Partners
               </div>
             </Link>
             <Link href={""}>
-              <div className="hover:text-blue-500 text-lg   md:text-[15px] text-gray-700 font-normal">
+              <div className="hover:text-blue-500 text-xl md:text-[15px] text-gray-700 font-normal">
                 Pricing
               </div>
             </Link>
             <Link href={"/blog"}>
-              <div className="hover:text-blue-500 text-lg   md:text-[15px] text-gray-700 font-normal">
+              <div className="hover:text-blue-500 text-xl md:text-[15px] text-gray-700 font-normal">
                 Blog
               </div>
             </Link>
           </div>
 
-          <div className="flex space-y-4 md:space-y-0 md:flex-row flex-col md:justify-center text-[15px] items-start md:items-center  md:space-x-8">
+          <div className="flex space-y-4 md:space-y-0 md:flex-row flex-col md:justify-center text-[15px] items-center md:items-center  md:space-x-8">
             <Link href={""}>
-              <div className="hover:text-blue-500 text-gray-700 font-normal">
+              <div className="hover:text-blue-500 md:border-none border py-4 md:py-0 px-24 md:px-0 rounded-full text-gray-700 font-normal">
                 Log In
               </div>
             </Link>
 
             <Link href={"/"}>
               <div
-                className="px-10 font-semibold   hover:-translate-y-1 duration-300  cursor-pointer w-full md:w-fit text-white  hover:opacity-90 bg-gray-800 rounded-full
+                className="md:px-10 px-24  font-semibold   hover:-translate-y-1 duration-300  cursor-pointer md:w-fit text-white  hover:opacity-90 bg-gray-800 rounded-full
              py-4 text-sm "
               >
                 Talk to us
