@@ -25,6 +25,7 @@ const userDetails = {
 };
 const Download = () => {
   const [updateUser, setUpdateUser] = useState(userDetails);
+  const [success,setSuccess] = useState(false)
 
   const userCollection = collection(db, "users");
 
@@ -37,6 +38,7 @@ const Download = () => {
         companySize: updateUser.companySize,
         headquarters: updateUser.headquarters,
       });
+      setSuccess(true)
       setUpdateUser(userDetails)
      
     } catch (err) {
@@ -85,7 +87,8 @@ const Download = () => {
           Simply fill out your details below to gain access to our complete
           guide to hiring in India.
         </p>
-        <div className="flex flex-col space-y-8">
+        {success && <p className="text-3xl font-extralight text-[#15357a]">Thank You</p>}
+        {!success && <div className="flex flex-col space-y-8">
           <div className="grid grid-cols-1 gap-y-6 md:gap-y-0 md:grid-cols-2 md:gap-x-4">
             <div className="flex flex-col space-y-1">
               <p className="text-gray-800 font-extralight">First name</p>
@@ -171,11 +174,11 @@ const Download = () => {
           <div
             onClick={submitNewUser}
             disabled={updateUser.firstName.length == 0 ? true : false}
-            className={`px-8  py-3 text-white bg-blue-600 font-semibold hover:opacity-90 cursor-pointer w-fit rounded-3xl`}
+            className={`px-8  py-3 ${updateUser.firstName.length == 0? "bg-blue-300":"bg-blue-600"} text-white bg-blue-600 font-semibold hover:opacity-90 cursor-pointer w-fit rounded-3xl`}
           >
             Download the Guide
           </div>
-        </div>
+        </div>}
       </div>
     </div>
   );

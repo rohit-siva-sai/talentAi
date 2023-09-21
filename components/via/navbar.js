@@ -51,7 +51,7 @@ const Navbar = () => {
                 setDropDown(!dropDown);
               }}
             >
-              <p className="group-hover:text-blue-500 text-lg  text-[15px] text-gray-700">
+              <p className="group-hover:text-blue-500 text-lg  md:text-[15px] text-gray-700">
                 How it works
               </p>
               <MdKeyboardArrowDown
