@@ -16,7 +16,7 @@ const client = createClient({
 });
 
 const UserProfile = ({ developer, skills }) => {
-  console.log("skils", skills, developer);
+  // console.log("skils", skills, developer);
 
   return (
     <div className="md:mx-48 mx-4 my-12 ">

@@ -23,7 +23,7 @@ const ProfileCard = ({
   const onChange = (e) => {
     setPlacement(e.target.value);
   };
-  console.log("develoepr", developer);
+  // console.log("develoepr", developer);
 
   // const onClose = () => {
   //   setOpen(false);

@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import { Drawer } from "antd";
 import { BsFillFilterCircleFill, BsFilterCircle } from "react-icons/bs";
 import { useRouter } from "next/router";
+import Skill from "@/models/Skill";
 
 const fetchAllDevelopersData = async () => {
   try {
@@ -40,58 +41,58 @@ const fetchAllDevelopersData = async () => {
   }
 };
 
-const Profiles = ({}) => {
+const Profiles = ({developersData,skills}) => {
   // console.log("hgsachgsa", developersData);
-  const [skills, setSkills] = useState([]);
+  // const [skills, setSkills] = useState([]);
   const [placement, setPlacement] = useState("top");
   const router = useRouter();
 
   const [showFilter, setShowFilter] = useState(false);
-  const [developersData, setDevelopersData] = useState();
-  const [filterDeveloperData, setFilterDeveloperData] = useState();
+  // const [developersData, setDevelopersData] = useState();
+  const [filterDeveloperData, setFilterDeveloperData] = useState(developersData);
 
-  const [loading,setLoading] = useState(true)
+  const [loading,setLoading] = useState(false)
 
-  const fetchDevelopers = async () => {
+  // const fetchDevelopers = async () => {
 
 
-    try {
-      const data = await fetch("https://talent-ai-ochre.vercel.app/api/developer");
-      if (!data.ok) {
-        throw new Error(`Failed to fetch: ${data.status} - ${data.statusText}`);
-      }
-      const dev = await data.json();
-      setDevelopersData(dev);
-      setFilterDeveloperData(dev);
-      setLoading(false)
-    } catch (error) {
-      console.error("Fetch error:", error);
-    }
-    // const data = await fetch("https://talent-ai-ochre.vercel.app/api/developer");
-    // const dev = await data.json();
+  //   try {
+  //     const data = await fetch("https://talent-ai-ochre.vercel.app/api/developer");
+  //     if (!data.ok) {
+  //       throw new Error(`Failed to fetch: ${data.status} - ${data.statusText}`);
+  //     }
+  //     const dev = await data.json();
+  //     setDevelopersData(dev);
+  //     setFilterDeveloperData(dev);
+  //     setLoading(false)
+  //   } catch (error) {
+  //     console.error("Fetch error:", error);
+  //   }
+  //   // const data = await fetch("https://talent-ai-ochre.vercel.app/api/developer");
+  //   // const dev = await data.json();
 
-    // setDevelopersData(dev);
-  };
+  //   // setDevelopersData(dev);
+  // };
 
-  const fetchSkill = async (email) => {
+  // const fetchSkill = async (email) => {
 
-    try {
-      const data = await fetch("https://talent-ai-ochre.vercel.app/api/skill");
-      if (!data.ok) {
-        throw new Error(`Failed to fetch: ${data.status} - ${data.statusText}`);
-      }
-      const skill = await data.json();
-      setSkills(skill);
+  //   try {
+  //     const data = await fetch("https://talent-ai-ochre.vercel.app/api/skill");
+  //     if (!data.ok) {
+  //       throw new Error(`Failed to fetch: ${data.status} - ${data.statusText}`);
+  //     }
+  //     const skill = await data.json();
+  //     setSkills(skill);
      
-    } catch (error) {
-      console.error("Fetch error:", error);
-    }
-    // const data = await fetch("https://talent-ai-ochre.vercel.app/api/skill");
-    // const skill = await data.json();
-    // // console.log('sdsds',skill);
+  //   } catch (error) {
+  //     console.error("Fetch error:", error);
+  //   }
+  //   // const data = await fetch("https://talent-ai-ochre.vercel.app/api/skill");
+  //   // const skill = await data.json();
+  //   // // console.log('sdsds',skill);
 
-    // setSkills(skill);
-  };
+  //   // setSkills(skill);
+  // };
   const onClose = () => {
     setShowFilter(!showFilter);
   };
@@ -100,11 +101,11 @@ const Profiles = ({}) => {
     return data;
   };
 
-  useEffect(() => {
-    fetchDevelopers();
-    fetchSkill();
-    // console.log(skills,"sahxfashgvsahxgv")
-  }, [router]);
+  // useEffect(() => {
+  //   fetchDevelopers();
+  //   fetchSkill();
+  //   // console.log(skills,"sahxfashgvsahxgv")
+  // }, [router]);
   const [categoryFilter, setCategoryFilter] = useState("All Categories");
   const filterDeveloper = (role) => {
     if (role == "All categories") {
@@ -200,20 +201,22 @@ const Profiles = ({}) => {
   );
 };
 
-// export async function getServerSideProps(context) {
-//   if (!mongoose.connections[0].readyState) {
-//     await mongoose.connect(process.env.MONGO_URI);
-//   }
+export async function getServerSideProps(context) {
+  if (!mongoose.connections[0].readyState) {
+    await mongoose.connect(process.env.MONGO_URI);
+  }
 
-//   const developersData = await Developer.find();
+  const developersData = await Developer.find().lean();
+  const skills = await Skill.find().lean();
 
-//   // const developersData = await fetchAllDevelopersData();
+  // const developersData = await fetchAllDevelopersData();
 
-//   return {
-//     props: {
-//       developersData: JSON.parse(JSON.stringify(developersData)),
-//     },
-//   };
-// }
+  return {
+    props: {
+      developersData: JSON.parse(JSON.stringify(developersData)),
+      skills: JSON.parse(JSON.stringify(skills)),
+    },
+  };
+}
 
 export default Profiles;

@@ -25,7 +25,7 @@ export const getServerSideProps = async (context) => {
 };
 
 const SanityProfile = ({ developersData, profiles }) => {
-  console.log("profiels", profiles[0].skills);
+  // console.log("profiels", profiles[0].skills);
 
   const [filterDeveloperData, setFilterDeveloperData] = useState(profiles);
 
