@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 const handler = async (req, res) => {
   
       let dev = await Education.find();
-      console.log('ss',dev)
+      // console.log('ss',dev)
       
       res.status(200).json(dev)
     //   console.log('Fetched developers:', dev);

@@ -10,25 +10,28 @@ import CategoryFilter from "@/components/profiles/categoryFilter";
 import { useEffect, useState } from "react";
 import { Drawer } from "antd";
 import { BsFillFilterCircleFill, BsFilterCircle } from "react-icons/bs";
+import { useRouter } from "next/router";
 
 const fetchAllDevelopersData = async () => {
   try {
-    const developers = await Developer.find();
-    const developersData = [];
-    for (const developer of developers) {
-      // const { email } = developer;
-      // const skills = await Skills.find({ email });
-      // const experience = await Experience.findOne({ email });
-      // const identity = await Identity.findOne({ email });
-      // const education = await Education.findOne({ email });
+    const developersData = await Developer.find();
+    // console.log('developres',developers);
 
-      const combinedData = {
-        developer,
-        // skills,
-        // experience,
-      };
-      developersData.push(combinedData);
-    }
+    // const developersData = [];
+    // for (const developer of developers) {
+    //   // const { email } = developer;
+    //   // const skills = await Skills.find({ email });
+    //   // const experience = await Experience.findOne({ email });
+    //   // const identity = await Identity.findOne({ email });
+    //   // const education = await Education.findOne({ email });
+
+    //   const combinedData = {
+    //     developer,
+    //     // skills,
+    //     // experience,
+    //   };
+    //   developersData.push(combinedData);
+    // }
 
     return developersData;
   } catch (error) {
@@ -37,33 +40,71 @@ const fetchAllDevelopersData = async () => {
   }
 };
 
-const Profiles = ({ developersData }) => {
+const Profiles = ({}) => {
   // console.log("hgsachgsa", developersData);
   const [skills, setSkills] = useState([]);
   const [placement, setPlacement] = useState("top");
+  const router = useRouter();
 
   const [showFilter, setShowFilter] = useState(false);
-  const [filterDeveloperData, setFilterDeveloperData] =
-    useState(developersData);
-  const fetchSkill = async (email) => {
-    const data = await fetch("http://localhost:3000/api/skill");
-    const skill = await data.json();
-    // console.log('sdsds',skill);
+  const [developersData, setDevelopersData] = useState();
+  const [filterDeveloperData, setFilterDeveloperData] = useState();
 
-    setSkills(skill);
+  const [loading,setLoading] = useState(true)
+
+  const fetchDevelopers = async () => {
+
+
+    try {
+      const data = await fetch("http://localhost:3000/api/developer");
+      if (!data.ok) {
+        throw new Error(`Failed to fetch: ${data.status} - ${data.statusText}`);
+      }
+      const dev = await data.json();
+      setDevelopersData(dev);
+      setFilterDeveloperData(dev);
+      setLoading(false)
+    } catch (error) {
+      console.error("Fetch error:", error);
+    }
+    // const data = await fetch("https://talent-ai-ochre.vercel.app/api/developer");
+    // const dev = await data.json();
+
+    // setDevelopersData(dev);
   };
-  const onClose = ()=>{
-    setShowFilter(!showFilter)
-  }
+
+  const fetchSkill = async (email) => {
+
+    try {
+      const data = await fetch("http://localhost:3000/api/skill");
+      if (!data.ok) {
+        throw new Error(`Failed to fetch: ${data.status} - ${data.statusText}`);
+      }
+      const skill = await data.json();
+      setSkills(skill);
+     
+    } catch (error) {
+      console.error("Fetch error:", error);
+    }
+    // const data = await fetch("https://talent-ai-ochre.vercel.app/api/skill");
+    // const skill = await data.json();
+    // // console.log('sdsds',skill);
+
+    // setSkills(skill);
+  };
+  const onClose = () => {
+    setShowFilter(!showFilter);
+  };
   const filterSkill = (email) => {
     const data = skills.filter((item) => item.email === email);
     return data;
   };
 
   useEffect(() => {
+    fetchDevelopers();
     fetchSkill();
     // console.log(skills,"sahxfashgvsahxgv")
-  }, [developersData]);
+  }, [router]);
   const [categoryFilter, setCategoryFilter] = useState("All Categories");
   const filterDeveloper = (role) => {
     if (role == "All categories") {
@@ -71,7 +112,7 @@ const Profiles = ({ developersData }) => {
       return;
     }
 
-    const data = developersData.filter((item) => item.developer.role === role);
+    const data = developersData.filter((item) => item.role === role);
     setFilterDeveloperData(data);
   };
   const showDrawer = () => {
@@ -83,7 +124,7 @@ const Profiles = ({ developersData }) => {
         onClick={showDrawer}
         className="md:hidden flex justify-end mx-4 pb-4"
       >
-        <BsFilterCircle size={22} className="text-lime-600 "/>
+        <BsFilterCircle size={22} className="text-lime-600 " />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-x-1  ">
         <Drawer
@@ -99,15 +140,13 @@ const Profiles = ({ developersData }) => {
             filterDeveloper={filterDeveloper}
           />
         </Drawer>
-        <div
-          className={` md:block hidden md:col-span-3`}
-        >
+        <div className={` md:block hidden md:col-span-3`}>
           <CategoryFilter
             categoryFilter={categoryFilter}
             filterDeveloper={filterDeveloper}
           />
         </div>
-        {filterDeveloperData.length < 1 && (
+        {(filterDeveloperData?.length < 1 || loading ) && (
           <picture className="place-self-center col-span-full md:col-span-9 ">
             <img
               src="https://img.freepik.com/premium-photo/white-people-examines-folder_58466-2854.jpg"
@@ -117,14 +156,14 @@ const Profiles = ({ developersData }) => {
           </picture>
         )}
         <div className="flex flex-col space-y-0 col-span-full md:col-span-9 ">
-          {filterDeveloperData.map((developerData) => {
+          {filterDeveloperData?.map((developerData) => {
             return (
               <ProfileCard
-                developer={developerData.developer}
+                developer={developerData}
                 // education={developerData.education}
                 // experience={developerData.experience}
                 // identity={developerData.identity}
-                skills={filterSkill(developerData.developer.email)}
+                skills={filterSkill(developerData.email)}
               />
             );
           })}
@@ -166,7 +205,9 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGO_URI);
   }
 
-  const developersData = await fetchAllDevelopersData();
+  const developersData = await Developer.find();
+
+  // const developersData = await fetchAllDevelopersData();
 
   return {
     props: {

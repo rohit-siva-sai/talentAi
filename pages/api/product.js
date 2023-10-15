@@ -6,10 +6,10 @@ const handler = async (req, res) => {
   try {
     if (req.method === "GET"){
       const developers = await Product.find()
-      console.log('ss',developers);
+      // console.log('ss',developers);
       
       res.status(200).json(developers);
-      console.log('Fetched developers:', developers);
+      // console.log('Fetched developers:', developers);
     } else {
       res.status(405).json({ error: "Method not allowed." });
     }

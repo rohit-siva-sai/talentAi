@@ -4,11 +4,11 @@ import mongoose from "mongoose";
 
 const handler = async (req, res) => {
   
-      console.log('wewehwefyecwgfc');
+      // console.log('wewehwefyecwgfc');
       
       // const dev = await Developer.find().lean()
       const dev = await Skill.find()
-      console.log('ss',dev);
+      // console.log('ss',dev);
       
       res.status(200).json(dev);
     //   console.log('Fetched developers:',dev);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiFillThunderbolt,AiOutlineHeart,AiFillHeart } from "react-icons/ai";
+import { AiFillThunderbolt, AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { TbBadgeFilled } from "react-icons/tb";
 import Skills from "./skills";
 import Explore from "./explore";
@@ -15,7 +15,7 @@ const ProfileCard = ({
 }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [open, setOpen] = useState(false);
-  const [like,setLike] = useState(false)
+  const [like, setLike] = useState(false);
   const [placement, setPlacement] = useState("right");
   const showDrawer = () => {
     setOpen(!open);
@@ -23,7 +23,8 @@ const ProfileCard = ({
   const onChange = (e) => {
     setPlacement(e.target.value);
   };
-  
+  console.log("develoepr", developer);
+
   // const onClose = () => {
   //   setOpen(false);
   // };
@@ -57,16 +58,29 @@ const ProfileCard = ({
             </div>
             <div className="flex w-fit ml-1 bg-white px-3 border-2 border-blue-700 rounded-xl space-x-1  opacity-70 items-center ">
               <AiFillThunderbolt className="text-blue-700" size={13} />
-              <p className="text-blue-700 text-sm">{developer.verified ? "verified": ""}</p>
+              <p className="text-blue-700 text-sm">
+                {developer.verified ? "verified" : ""}
+              </p>
             </div>
           </div>
           <div className="flex items-center space-x-3">
-            <div className="border border-gray-400 rounded-full w-fit p-1" onClick={()=>{setLike(true)}} >
+            {/* <div className="border border-gray-400 rounded-full w-fit p-1" onClick={()=>{setLike(true)}} >
                  {!like ?<AiOutlineHeart className="text-lime-600" />:<AiFillHeart className="text-lime-500" />}
-            </div>
+            </div> */}
+
+            <Link href={`/profiles/${developer._id}`} className="z-40">
+              <div
+                className="px-4 z-20 md:px-4 cursor-pointer border border-lime-500 mx-auto md:mx-0 w-fit text-lime-700  hover:text-white  hover:bg-lime-600 rounded-md
+             py-1 text-sm hover:opacity-90"
+              >
+                View More
+              </div>
+            </Link>
             <Link href={"https://client-a550d.web.app/"}>
-              <div className="px-4 md:px-4 cursor-pointer border border-lime-500 mx-auto md:mx-0 w-fit text-lime-700  hover:text-white  hover:bg-lime-600 rounded-md
-             py-1 text-sm hover:opacity-90">
+              <div
+                className="px-4 z-20 md:px-4 cursor-pointer border border-lime-500 mx-auto md:mx-0 w-fit text-lime-700  hover:text-white  hover:bg-lime-600 rounded-md
+             py-1 text-sm hover:opacity-90"
+              >
                 hire now
               </div>
             </Link>
@@ -81,7 +95,13 @@ const ProfileCard = ({
           </p>
           <div className="font-semibold flex felx-col -space-y-1 flex-col  text-[15px]  text-lime-600">
             <p>88% Job Success</p>
-            <Progress showInfo={false} strokeColor={"#1f57c3"} className="text-red-600" size={[,5]} percent={88} />
+            <Progress
+              showInfo={false}
+              strokeColor={"#1f57c3"}
+              className="text-red-600"
+              size={[, 5]}
+              percent={88}
+            />
           </div>
           <div className="flex space-x-1 items-center">
             <TbBadgeFilled size={20} className="text-rose-400" />

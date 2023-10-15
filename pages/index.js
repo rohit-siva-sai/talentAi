@@ -13,6 +13,8 @@ import BrowseTalent from "@/components/in_build/browseTalent";
 import WorkGame from "@/components/in_build/workGame";
 import Partners from "@/components/in_build/partners";
 import Stepbystep from "@/components/in_build/stepbystep";
+import Faqs from "@/components/in_build/faqs";
+import HowItWorks from "@/components/in_build/howItWorks";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,8 +25,10 @@ export default function Home() {
       <Workforce />
       <BrowseTalent />
       <WorkGame />
+      <HowItWorks/>
       <Partners />
       <Stepbystep />
+      <Faqs/>
     </div>
     // <main
     //   className={``}

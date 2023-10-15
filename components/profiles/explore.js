@@ -15,6 +15,15 @@ const Explore = ({ developer, skills }) => {
           <p className="font-semibold text-gray-600 text-2xl pb-2 ">
             Talent Information
           </p>
+          <div className="flex space-x-3 items-center">
+          <Link href={`profiles/${developer._id}`} className="">
+            <div
+              className="px-4 md:px-4 cursor-pointer border border-lime-500 mx-auto md:mx-0 w-fit text-lime-700  hover:text-white  hover:bg-lime-600 rounded-md
+             py-1 text-sm hover:opacity-90"
+            >
+             View more
+            </div>
+          </Link>
           <Link href={"https://client-a550d.web.app"} className="mr-4">
             <div
               className="px-4 md:px-4 cursor-pointer border border-lime-500 mx-auto md:mx-0 w-fit text-lime-700  hover:text-white  hover:bg-lime-600 rounded-md
@@ -23,6 +32,7 @@ const Explore = ({ developer, skills }) => {
               hire now
             </div>
           </Link>
+          </div>
         </div>
         <div className="flex flex-col space-y-4 border-2 md:px-4 px-2 py-2 md:py-4 rounded-lg">
           <div className="flex justify-between items-start border-2 px-4 py-3 rounded-lg">
