@@ -56,7 +56,7 @@ const Profiles = ({}) => {
 
 
     try {
-      const data = await fetch("http://localhost:3000/api/developer");
+      const data = await fetch("https://talent-ai-ochre.vercel.app/api/developer");
       if (!data.ok) {
         throw new Error(`Failed to fetch: ${data.status} - ${data.statusText}`);
       }
@@ -76,7 +76,7 @@ const Profiles = ({}) => {
   const fetchSkill = async (email) => {
 
     try {
-      const data = await fetch("http://localhost:3000/api/skill");
+      const data = await fetch("https://talent-ai-ochre.vercel.app/api/skill");
       if (!data.ok) {
         throw new Error(`Failed to fetch: ${data.status} - ${data.statusText}`);
       }
@@ -200,20 +200,20 @@ const Profiles = ({}) => {
   );
 };
 
-export async function getServerSideProps(context) {
-  if (!mongoose.connections[0].readyState) {
-    await mongoose.connect(process.env.MONGO_URI);
-  }
+// export async function getServerSideProps(context) {
+//   if (!mongoose.connections[0].readyState) {
+//     await mongoose.connect(process.env.MONGO_URI);
+//   }
 
-  const developersData = await Developer.find();
+//   const developersData = await Developer.find();
 
-  // const developersData = await fetchAllDevelopersData();
+//   // const developersData = await fetchAllDevelopersData();
 
-  return {
-    props: {
-      developersData: JSON.parse(JSON.stringify(developersData)),
-    },
-  };
-}
+//   return {
+//     props: {
+//       developersData: JSON.parse(JSON.stringify(developersData)),
+//     },
+//   };
+// }
 
 export default Profiles;
