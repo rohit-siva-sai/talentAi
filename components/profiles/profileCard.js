@@ -30,8 +30,8 @@ const ProfileCard = ({
   // };
   return (
     <div onClick={showDrawer}>
-      <div className=" border md:px-6  px-2 flex flex-col space-y-4 py-3 md:py-4  cursor-pointer hover:bg-gray-100">
-        <div className="flex justify-between items-start md:items-center">
+      <div className=" border md:px-6  px-2 flex flex-col space-y-4 py-3 md:py-4 z-10  cursor-pointer hover:bg-gray-100">
+        <div className="flex justify-between items-start md:items-center ">
           <div className="flex flex-col space-y-2">
             <div className="flex space-x-3 md:space-x-3 items-center">
               <div className="relative">
@@ -46,7 +46,7 @@ const ProfileCard = ({
               </div>
               <div>
                 <p className="font-semibold text-lime-600 text-sm">
-                  {developer.userName}
+                  {developer.username}
                 </p>
                 <p className="font-normal text-gray-700 text-xs md:text-sm">
                   {developer?.role}
@@ -63,23 +63,29 @@ const ProfileCard = ({
               </p>
             </div>
           </div>
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-1 md:space-x-3 ">
             {/* <div className="border border-gray-400 rounded-full w-fit p-1" onClick={()=>{setLike(true)}} >
                  {!like ?<AiOutlineHeart className="text-lime-600" />:<AiFillHeart className="text-lime-500" />}
             </div> */}
 
-            <Link href={`/profiles/${developer._id}`} className="z-40">
+            <Link href={`/profiles/${developer.slug.current}`}  onClick={(e) => {
+                  e.stopPropagation();
+                }}>
               <div
-                className="px-4 z-20 md:px-4 cursor-pointer border border-lime-500 mx-auto md:mx-0 w-fit text-lime-700  hover:text-white  hover:bg-lime-600 rounded-md
-             py-1 text-sm hover:opacity-90"
+                
+                className="px-2 z-50  md:px-4 cursor-pointer border border-lime-500 mx-auto md:mx-0 w-fit text-lime-700  hover:text-white  hover:bg-lime-600 rounded-md
+             py-1 text-xs md:text-sm hover:opacity-90"
               >
-                View More
+                View Profile
               </div>
             </Link>
-            <Link href={"https://client-a550d.web.app/"}>
+            <Link href={"https://client-a550d.web.app/"}  onClick={(e) => {
+                  e.stopPropagation();
+                }} >
               <div
-                className="px-4 z-20 md:px-4 cursor-pointer border border-lime-500 mx-auto md:mx-0 w-fit text-lime-700  hover:text-white  hover:bg-lime-600 rounded-md
-             py-1 text-sm hover:opacity-90"
+
+                className="px-2 z-20 md:px-4 cursor-pointer border border-lime-500 mx-auto md:mx-0 w-fit text-lime-700  hover:text-white  hover:bg-lime-600 rounded-md
+             py-1 text-xs md:text-sm hover:opacity-90"
               >
                 hire now
               </div>

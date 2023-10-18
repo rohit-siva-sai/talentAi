@@ -6,7 +6,7 @@ import Identity from "@/models/Identity";
 import Education from "@/models/Education";
 import mongoose from "mongoose";
 import ProfileCard from "@/components/profiles/profileCard";
-import CategoryFilter from "@/components/profiles/categoryFilter";
+import CategoryFilter from "@/components/profiles/filters/categoryFilter";
 import { useEffect, useState } from "react";
 import { Drawer } from "antd";
 import { BsFillFilterCircleFill, BsFilterCircle } from "react-icons/bs";

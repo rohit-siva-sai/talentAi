@@ -16,7 +16,7 @@ const Explore = ({ developer, skills }) => {
             Talent Information
           </p>
           <div className="flex space-x-3 items-center">
-          <Link href={`profiles/${developer._id}`} className="">
+          <Link href={`profiles/${developer.slug.current}`} className="">
             <div
               className="px-4 md:px-4 cursor-pointer border border-lime-500 mx-auto md:mx-0 w-fit text-lime-700  hover:text-white  hover:bg-lime-600 rounded-md
              py-1 text-sm hover:opacity-90"
@@ -93,7 +93,7 @@ const Explore = ({ developer, skills }) => {
             <div className="flex items-center space-x-2">
               <HiAcademicCap size={18} />
               <p className="first-letter:uppercase font-medium text-gray-500">
-                - years
+                {developer.experience} - years
               </p>
             </div>
           </div>

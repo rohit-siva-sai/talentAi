@@ -15,7 +15,7 @@ const Workforce = () => {
           </p>
 
           <div className="flex space-x-4 mt-8">
-            <Link href={"/profiles"}>
+            <Link href={"/sanityProfile"}>
               <div
                 className="px-8 md:px-10 cursor-pointer mx-auto md:mx-0 w-fit text-white  bg-lime-600 rounded-md
              py-2 text-sm hover:opacity-90"

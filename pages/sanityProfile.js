@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createClient } from "@sanity/client";
 import { Drawer } from "antd";
 import { BsFilterCircle } from "react-icons/bs";
-import CategoryFilter from "@/components/profiles/categoryFilter";
+import CategoryFilter from "@/components/profiles/filters/categoryFilter";
 import ProfileCard from "@/components/profiles/profileCard";
+import ApplyFilter from "@/components/profiles/filters/applyFilter";
+import { filterProfile, profileFilter } from "@/useStore/filterProfile";
+import { useRouter } from "next/router";
 
 const client = createClient({
   projectId: "qkq2pa17",
@@ -15,17 +18,28 @@ export const getServerSideProps = async (context) => {
   const { slug } = context.query;
 
   const query2 = `*[_type == "profile"] {...,skills[]->}`;
-  const profiles = await client.fetch(query2);
+  const developersData = await client.fetch(query2);
 
   return {
     props: {
-      profiles,
+      developersData,
     },
   };
 };
 
-const SanityProfile = ({ developersData, profiles }) => {
-  // console.log("profiels", profiles[0].skills);
+const SanityProfile = ({ developersData }) => {
+  // console.log("profiels", developersData);
+  const router = useRouter()
+  const [profiles, updateProfiles,updateAllProfiles] = profileFilter((store) => [
+    store.profiles,
+    store.updateProfiles,
+    store.updateAllProfiles,
+  ]);
+  useEffect(() => {
+    updateProfiles(developersData);
+    updateAllProfiles(developersData);
+  }, [router]);
+  // console.log("prod", profiles);
 
   const [filterDeveloperData, setFilterDeveloperData] = useState(profiles);
 
@@ -73,18 +87,18 @@ const SanityProfile = ({ developersData, profiles }) => {
           open={showFilter}
           onClose={onClose}
         >
-          <CategoryFilter
+          <ApplyFilter
             categoryFilter={categoryFilter}
             filterDeveloper={filterDeveloper}
           />
         </Drawer>
         <div className={` md:block hidden md:col-span-3`}>
-          <CategoryFilter
+          <ApplyFilter
             categoryFilter={categoryFilter}
             filterDeveloper={filterDeveloper}
           />
         </div>
-        {filterDeveloperData?.length < 1 && (
+        {profiles?.length < 1 && (
           <picture className="place-self-center col-span-full md:col-span-9 ">
             <img
               src="https://img.freepik.com/premium-photo/white-people-examines-folder_58466-2854.jpg"
@@ -94,7 +108,7 @@ const SanityProfile = ({ developersData, profiles }) => {
           </picture>
         )}
         <div className="flex flex-col space-y-0 col-span-full md:col-span-9 ">
-          {filterDeveloperData?.map((developerData) => {
+          {profiles?.map((developerData) => {
             return (
               <ProfileCard
                 developer={developerData}
@@ -112,5 +126,3 @@ const SanityProfile = ({ developersData, profiles }) => {
 };
 
 export default SanityProfile;
-
-
