@@ -9,53 +9,53 @@ const category = [
     value: "All categories",
   },
   {
-    label: "Front end developer",
-    value: "Front end developer",
+    label: "Data Analyst",
+    value: "Data Analyst",
   },
   {
-    label: "Devops",
-    value: "Devops",
+    label: "Data Engineer",
+    value: "Data Engineer",
   },
   {
-    label: "Accounting & Consulting",
-    value: "Accounting & Consulting",
+    label: "Data Scientist",
+    value: "Data Scientist",
   },
   {
-    label: "Admin Support",
-    value: "Admin Support",
+    label: "ML Engineer",
+    value: "ML Engineer",
   },
-  {
-    label: "Customer Service",
-    value: "Customer Service",
-  },
-  {
-    label: "Data Science & Analytics",
-    value: "Data Science & Analytics",
-  },
-  {
-    label: "Design & Creative",
-    value: "Design & Creative",
-  },
-  {
-    label: "Engineering & Architecture",
-    value: "Engineering & Architecture",
-  },
-  {
-    label: "IT & Networking",
-    value: "IT & Networking",
-  },
-  {
-    label: "Legal",
-    value: "Legal",
-  },
-  {
-    label: "Sales & Marketing",
-    value: "Sales & Marketing",
-  },
-  {
-    label: "Translation",
-    value: "Translation",
-  },
+  // {
+  //   label: "Customer Service",
+  //   value: "Customer Service",
+  // },
+  // {
+  //   label: "Data Science & Analytics",
+  //   value: "Data Science & Analytics",
+  // },
+  // {
+  //   label: "Design & Creative",
+  //   value: "Design & Creative",
+  // },
+  // {
+  //   label: "Engineering & Architecture",
+  //   value: "Engineering & Architecture",
+  // },
+  // {
+  //   label: "IT & Networking",
+  //   value: "IT & Networking",
+  // },
+  // {
+  //   label: "Legal",
+  //   value: "Legal",
+  // },
+  // {
+  //   label: "Sales & Marketing",
+  //   value: "Sales & Marketing",
+  // },
+  // {
+  //   label: "Translation",
+  //   value: "Translation",
+  // },
 ];
 
 const CategoryFilter = ({ CategoryFilter, filterDeveloper }) => {

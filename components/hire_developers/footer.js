@@ -14,15 +14,15 @@ const Footer = () => {
           <div className="flex flex-col space-y-2">
             <p className="text-base text-white">Companies</p>
             <Link href={""}>
-              <p className="text-sm text-gray-400">Hire Developers</p>
+              <p className="text-sm text-gray-400">Hire Now</p>
             </Link>
             <Link href={""}>
-              <p className="text-sm text-gray-400">Book a call</p>
+              <p className="text-sm text-gray-400">Schedule a Call</p>
             </Link>
             <Link href={""}>
-              <p className="text-sm text-gray-400">Explore Services</p>
+              <p className="text-sm text-gray-400">Hiring Guide</p>
             </Link>
-            <Link href={""}>
+            {/* <Link href={""}>
               <p className="text-sm text-gray-400">Our Service Offerings</p>
             </Link>
             <Link href={""}>
@@ -39,7 +39,7 @@ const Footer = () => {
             </Link>
             <Link href={""}>
               <p className="text-sm text-gray-400">Hiring Resources</p>
-            </Link>
+            </Link> */}
           </div>
           <div className="flex flex-col space-y-2">
             <p className="text-base text-white">Developers</p>

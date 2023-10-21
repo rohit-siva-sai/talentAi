@@ -27,7 +27,12 @@ const Navbar = () => {
             <div className="flex justify-center items-center space-x-4 md:space-x-8">
               <Link href={"/blog?category=all"}>
                 <div className="font-light  text-[13px] md:text-base cursor-pointer hover:underline  underline-offset-8 transition-all duration-300 decoration-blue-500 decoration-2">
-                  Blog
+                  NewsLetter
+                </div>
+              </Link>
+              <Link href={"/sanityProfile"}>
+                <div className="font-light  text-[13px] md:text-base cursor-pointer hover:underline  underline-offset-8 transition-all duration-300 decoration-blue-500 decoration-2">
+                  Apply for Job
                 </div>
               </Link>
 
@@ -36,7 +41,7 @@ const Navbar = () => {
                   className="px-8 font-semibold cursor-pointer w-fit text-white  hover:opacity-90 bg-blue-500 rounded-md
              py-2 text-sm"
                 >
-                  Get Started
+                  Hire now
                 </div>
               </Link>
               {/* <Link href={"/login"}>

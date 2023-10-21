@@ -62,15 +62,15 @@ const WorkGame = () => {
           <div className="flex space-x-3 md:space-x-6 mt-6">
             <Link href={""}>
               <div
-                className="px-6 md:px-10 font-semibold  cursor-pointer w-fit text-white  hover:opacity-90 bg-lime-600 rounded-3xl
-             py-2 text-sm"
+               className="px-8 md:px-10 cursor-pointer mx-auto md:mx-0 w-fit text-white  bg-lime-600 rounded-md
+               py-2 text-sm hover:opacity-90"
               >
                 Sign up for free
               </div>
             </Link>
             <Link href={""}>
               <div
-                className="px-4 md:px-8 font-semibold cursor-pointer text-lime-600 w-fit  hover:opacity-90 border border-lime-600 rounded-3xl
+                className="px-4 md:px-10 font-semibold cursor-pointer text-lime-600 w-fit  hover:opacity-90 border border-lime-600 rounded-md
              py-2 text-sm"
               >
                 Learn how to hire

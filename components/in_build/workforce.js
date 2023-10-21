@@ -28,7 +28,7 @@ const Workforce = () => {
                 className="px-10 md:px-12 cursor-pointer mx-auto md:mx-0 w-fit text-white  bg-blue-500 rounded-md
              py-2 text-sm hover:opacity-90"
               >
-                Get Started
+                Hire now
               </div>
             </Link>
           </div>

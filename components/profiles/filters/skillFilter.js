@@ -8,62 +8,63 @@ const skills = [
       value: "All skills",
     },
     {
-      label: "Blender",
-      value: "Blender",
+      label: "Analytical Skills",
+      value: "Analytical Skills",
     },
     {
-      label: "React",
-      value: "React",
+      label: "Data Visualization",
+      value: "Data Visualization",
     },
     {
       label: "Python",
       value: "Python",
     },
     {
-      label: "Java",
-      value: "Java",
+      label: "Data Warehousing",
+      value: "Data Warehousing",
     },
     {
       label: "C++",
       value: "C++",
     },
     {
-      label: "HTML",
-      value: "HTML",
+      label: "Deep Learning",
+      value: "Deep Learning",
     },
-    {
-      label: "JavaScript",
-      value: "JavaScript",
-    },
-    {
-      label: "Node.js",
-      value: "Node.js",
-    },
+   
     {
       label: "SQL",
       value: "SQL",
     },
-    {
-      label: "Photoshop",
-      value: "Photoshop",
-    },
-    {
-      label: "Illustrator",
-      value: "Illustrator",
-    },
-    {
-      label: "PHP",
-      value: "PHP",
-    },
-    {
-      label: "Swift",
-      value: "Swift",
-    },
-    {
-      label: "Solidity",
-      value: "Solidity",
-    },
-    // Add more skills as needed
+    // {
+    //   label: "Photoshop",
+    //   value: "Photoshop",
+    // },
+    // {
+    //   label: "Illustrator",
+    //   value: "Illustrator",
+    // },
+    // {
+    //   label: "PHP",
+    //   value: "PHP",
+    // },
+    // {
+    //   label: "Swift",
+    //   value: "Swift",
+    // },
+    // {
+    //   label: "Solidity",
+    //   value: "Solidity",
+    // },
+    // {
+    //   label: "JavaScript",
+    //   value: "JavaScript",
+    // },
+    // {
+    //   label: "Node.js",
+    //   value: "Node.js",
+    // },
+   
   ];
   
 

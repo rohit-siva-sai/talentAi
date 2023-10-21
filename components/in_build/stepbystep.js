@@ -58,8 +58,8 @@ const Stepbystep = () => {
         </div>
         <Link href={""}>
           <div
-            className="px-8 font-semibold cursor-pointer bg-lime-600 w-fit  hover:opacity-90 border text-white rounded-3xl
-             py-2 mt-4 text-sm"
+            className="px-8 md:px-10 cursor-pointer mt-6 mx-auto md:mx-0 w-fit text-white  bg-lime-600 rounded-md
+            py-2 text-sm hover:opacity-90"
           >
             Let&#39;s talk
           </div>

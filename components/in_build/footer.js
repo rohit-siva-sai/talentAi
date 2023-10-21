@@ -15,26 +15,26 @@ const Footer = () => {
   }, [router]);
   return (
    <div>
-    {showFooter && <div className="bg-gray-950  py-12 px-4 ">
-      <div className="flex md:flex-row flex-col justify-center md:space-y-0 md:space-x-36  space-y-8 ">
+    {showFooter && <div className="bg-gray-950 md:px-48  py-12 px-4 ">
+      <div className="flex md:flex-row flex-col justify-between md:space-y-0 md:space-x-36  space-y-8 ">
         <Link href={"/"}>
           <div className="text-3xl text-white tracking-wider font-semibold">
             Turing
           </div>
         </Link>
-        <div className="grid md:grid-cols-4 grid-cols-2 md:gap-x-14 md:gap-y-0 gap-y-10 gap-x-4">
+        <div className="grid md:grid-cols-3 grid-cols-2 md:gap-x-14 md:gap-y-0 gap-y-10 gap-x-4">
           <div className="flex flex-col space-y-2">
             <p className="text-base text-white">For Companies</p>
             <Link href={""}>
-              <p className="text-sm text-gray-400">Hire Developers</p>
+              <p className="text-sm text-gray-400">Hire Now</p>
             </Link>
             <Link href={""}>
-              <p className="text-sm text-gray-400">Book a call</p>
+              <p className="text-sm text-gray-400">Schedule a Call</p>
             </Link>
             <Link href={""}>
-              <p className="text-sm text-gray-400">Explore Services</p>
+              <p className="text-sm text-gray-400">Hiring Guide</p>
             </Link>
-            <Link href={""}>
+            {/* <Link href={""}>
               <p className="text-sm text-gray-400">Our Service Offerings</p>
             </Link>
             <Link href={""}>
@@ -51,20 +51,20 @@ const Footer = () => {
             </Link>
             <Link href={""}>
               <p className="text-sm text-gray-400">Hiring Resources</p>
-            </Link>
+            </Link> */}
           </div>
           <div className="flex flex-col space-y-2">
-            <p className="text-base text-white">Developers</p>
+            <p className="text-base text-white">About Company</p>
             <Link href={""}>
-              <p className="text-sm text-gray-400">Apply for Jobs</p>
+              <p className="text-sm text-gray-400">NewsLetter</p>
             </Link>
             <Link href={""}>
-              <p className="text-sm text-gray-400">Developer Login</p>
+              <p className="text-sm text-gray-400">About us</p>
             </Link>
             <Link href={""}>
-              <p className="text-sm text-gray-400">Remote Developer Jobs</p>
+              <p className="text-sm text-gray-400">Contact Us</p>
             </Link>
-            <Link href={""}>
+            {/* <Link href={""}>
               <p className="text-sm text-gray-400">Developer Reviews</p>
             </Link>
             <Link href={""}>
@@ -75,24 +75,24 @@ const Footer = () => {
             </Link>
             <Link href={""}>
               <p className="text-sm text-gray-400">Jobs for LatAm</p>
-            </Link>
+            </Link> */}
           </div>
           <div className="flex flex-col space-y-2">
-            <p className="text-base text-white">Company</p>
+            <p className="text-base text-white">Social Media</p>
             <Link href={""}>
-              <p className="text-sm text-gray-400">Blog</p>
+              <p className="text-sm text-gray-400">Linkedin</p>
             </Link>
             <Link href={""}>
-              <p className="text-sm text-gray-400">Press</p>
+              <p className="text-sm text-gray-400">twitter</p>
             </Link>
-            <Link href={""}>
+            {/* <Link href={""}>
               <p className="text-sm text-gray-400">About Us</p>
             </Link>
             <Link href={""}>
               <p className="text-sm text-gray-400">Careers</p>
-            </Link>
+            </Link> */}
           </div>
-          <div className="flex flex-col space-y-2">
+          {/* <div className="flex flex-col space-y-2">
             <p className="text-base text-white">Contact</p>
             <Link href={""}>
               <p className="text-sm text-gray-400">Contact Us</p>
@@ -106,7 +106,7 @@ const Footer = () => {
             <Link href={""}>
               <p className="text-sm text-gray-400">Customer Support</p>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>}

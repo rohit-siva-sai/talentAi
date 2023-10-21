@@ -92,7 +92,7 @@ const ProfileCard = ({
             </Link>
           </div>
         </div>
-        <div className=" md:flex hidden  justify-between ml-2">
+        {/* <div className=" md:flex hidden  justify-between ml-2">
           <p className="font-semibold text-[15px]  text-gray-500">
             <span className="text-gray-700">$5.00</span>/hr
           </p>
@@ -115,7 +115,7 @@ const ProfileCard = ({
               top rated
             </p>
           </div>
-        </div>
+        </div> */}
         <div>
           <p className="line-clamp-2 text-[15px] text-gray-700">
             {developer.message}
