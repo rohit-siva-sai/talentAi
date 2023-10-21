@@ -18,7 +18,7 @@ const Skills = ({ skills, size = null }) => {
                 <div>
                   {item.skillLevel == "Advanced" && (
                     <div
-                      className={`px-2 my-1 ml-2  border border-gray-400 text-xs md:text-sm  py-[2px] text-${
+                      className={`px-2 my-1 ml-2  border border-gray-400 bg-lime-50/90 text-xs md:text-sm  py-[2px] text-${
                         size ? size : "xs"
                       } rounded-md font-medium  text-gray-800`}
                     >

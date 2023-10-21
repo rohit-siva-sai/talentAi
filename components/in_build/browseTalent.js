@@ -1,58 +1,65 @@
+import { profileFilter } from "@/useStore/filterProfile";
 import Link from "next/link";
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
 const array = [
   {
-    category: "Development & IT",
+    category: "Data Analyst",
     rating: "4.85",
     skills: "1853",
     link: "",
   },
   {
-    category: "AI Services",
+    category: "Data Engineer",
     rating: "4.8",
     skills: "294",
     link: "",
   },
   {
-    category: "Design & Creative",
+    category: "Data Scientist",
     rating: "4.91",
     skills: "968",
     link: "",
   },
   {
-    category: "Sales and Marketing",
+    category: "ML Engineer",
     rating: "4.77",
     skills: "392",
     link: "",
   },
-  {
-    category: "Writing & Translation",
-    rating: "4.92",
-    skills: "505",
-    link: "",
-  },
-  {
-    category: "Admin & Customer Support",
-    rating: "4.77",
-    skills: "508",
-    link: "",
-  },
-  {
-    category: "Finance & Accounting",
-    rating: "4.79",
-    skills: "214",
-    link: "",
-  },
-  {
-    category: "Engineering & Architecture",
-    rating: "4.85",
-    skills: "650",
-    link: "",
-  },
+  // {
+  //   category: "Writing & Translation",
+  //   rating: "4.92",
+  //   skills: "505",
+  //   link: "",
+  // },
+  // {
+  //   category: "Admin & Customer Support",
+  //   rating: "4.77",
+  //   skills: "508",
+  //   link: "",
+  // },
+  // {
+  //   category: "Finance & Accounting",
+  //   rating: "4.79",
+  //   skills: "214",
+  //   link: "",
+  // },
+  // {
+  //   category: "Engineering & Architecture",
+  //   rating: "4.85",
+  //   skills: "650",
+  //   link: "",
+  // },
 ];
 
 const BrowseTalent = () => {
+
+  const [allProfiles, filterByCategory] = profileFilter((store) => [
+    store.allProfiles,
+    store.filterByCategory,
+  ]);
+
   return (
     <div className="md:px-48 px-4 pt-6 pb-10">
       <p className="text-gray-700 text-3xl md:text-[34px]">Browse Talent by Category</p>
@@ -65,8 +72,8 @@ const BrowseTalent = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 md:gap-x-6 gap-y-4 md:gap-y-6 align-middle mt-10  ">
         {array.map((item) => {
           return (
-            <Link href={""} className="bg-slate-50 pl-2 md:pl-4 pt-4 pb-12 rounded-lg hover:shadow-md transition-shadow duration-300 ">
-              <div>
+            <Link href={"/sanityProfile"} className="bg-slate-50 pl-2 md:pl-4 pt-4 pb-12 rounded-lg hover:shadow-md transition-shadow duration-300 "   >
+              <div  >
                 <p className="text-base font-semibold text-gray-800">{item.category}</p>
                 <div className="flex space-x-6 items-center mt-3 text-gray-500 text-sm">
                   <div className="flex space-x-1 items-center">
