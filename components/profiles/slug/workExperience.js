@@ -9,7 +9,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 const WorkExperience = ({ workExperience }) => {
-  console.log("work", workExperience.reverse());
+  // console.log("work", workExperience.reverse());
   const [collapse, setCollapse] = useState(false);
 
   return (

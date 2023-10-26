@@ -276,7 +276,7 @@ const SkillFilter = ({ filterDeveloper }) => {
       >
         <div>
           <input
-            type="text"
+            type="search"
             name=""
             id=""
             placeholder="serach by skill"

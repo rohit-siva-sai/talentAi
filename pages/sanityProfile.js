@@ -12,6 +12,7 @@ const client = createClient({
   projectId: "qkq2pa17",
   dataset: "production",
   useCdn: false,
+ 
 });
 
 export const getServerSideProps = async (context) => {
