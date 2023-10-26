@@ -1,8 +1,8 @@
 import React from "react";
 import { RiStarFill } from "react-icons/ri";
 
-const Skills = ({ skills, size = null }) => {
-  console.log("skils", skills);
+const Skills = ({ skills, size = null,message }) => {
+  // console.log("skils", skills);
 
   return (
     <div className="flex flex-col space-y-4">
@@ -18,7 +18,7 @@ const Skills = ({ skills, size = null }) => {
                 <div>
                   {item.skillLevel == "Advanced" && (
                     <div
-                      className={`px-2 my-1 ml-2  border border-gray-400 bg-lime-50/90 text-xs md:text-sm  py-[2px] text-${
+                      className={`px-2 my-1 mr-2  border border-gray-400 bg-lime-50/90 text-xs md:text-sm  py-[2px] text-${
                         size ? size : "xs"
                       } rounded-md font-medium  text-gray-800`}
                     >
@@ -34,7 +34,12 @@ const Skills = ({ skills, size = null }) => {
         </div>
       </div>
       <div>
-        <p className="text-gray-700 mx-2 font-semibold mb-2">
+          <p className="line-clamp-2 text-[15px] text-gray-700">
+            {message}
+          </p>
+        </div>
+      <div>
+        <p className="text-gray-700  font-semibold mb-2">
           Additional Skills
         </p>
         <div className="flex  flex-wrap">
@@ -44,7 +49,7 @@ const Skills = ({ skills, size = null }) => {
                 <div>
                   {!(item.skillLevel == "Advanced") && (
                     <div
-                      className={`px-2 my-1 ml-2  border border-gray-400 text-xs md:text-sm  py-[2px] text-${
+                      className={`px-2 my-1 mr-2   border border-gray-400 text-xs md:text-sm  py-[2px] text-${
                         size ? size : "xs"
                       } rounded-md font-medium  text-gray-800`}
                     >

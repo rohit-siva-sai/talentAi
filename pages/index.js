@@ -15,6 +15,7 @@ import Partners from "@/components/in_build/partners";
 import Stepbystep from "@/components/in_build/stepbystep";
 import Faqs from "@/components/in_build/faqs";
 import HowItWorks from "@/components/in_build/howItWorks";
+import Colleagues from "@/components/in_build/colleagues";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function Home() {
       <BrowseTalent />
       <WorkGame />
       <HowItWorks/>
+      <Colleagues/>
       <Partners />
       <Stepbystep />
       <Faqs/>

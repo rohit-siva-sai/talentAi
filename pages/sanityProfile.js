@@ -115,7 +115,7 @@ const SanityProfile = ({ developersData }) => {
                 // education={developerData.education}
                 // experience={developerData.experience}
                 // identity={developerData.identity}
-                skills={developerData.skills}
+                skills={developerData?.skills}
               />
             );
           })}

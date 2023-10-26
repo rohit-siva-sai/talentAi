@@ -73,7 +73,7 @@ const BrowseTalent = () => {
         {array.map((item) => {
           return (
             <Link href={"/sanityProfile"} className="bg-slate-50 pl-2 md:pl-4 pt-4 pb-12 rounded-lg hover:shadow-md transition-shadow duration-300 "   >
-              <div  >
+              <div onClick={()=>{filterByCategory(item.category)}} >
                 <p className="text-base font-semibold text-gray-800">{item.category}</p>
                 <div className="flex space-x-6 items-center mt-3 text-gray-500 text-sm">
                   <div className="flex space-x-1 items-center">

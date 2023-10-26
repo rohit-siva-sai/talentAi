@@ -37,7 +37,7 @@ const ProfileCard = ({
               <div className="relative">
                 <picture>
                   <img
-                    src={developer.userImage}
+                    src={developer?.userImage}
                     className="rounded-full md:w-[70px] w-[60px] h-[60px] md:h-[70px] border"
                     alt=""
                   />
@@ -46,20 +46,20 @@ const ProfileCard = ({
               </div>
               <div>
                 <p className="font-semibold text-lime-600 text-sm">
-                  {developer.username}
+                  {developer?.username}
                 </p>
                 <p className="font-normal text-gray-700 text-xs md:text-sm">
                   {developer?.role}
                 </p>
                 <p className="font-medium text-gray-500 text-xs  md:text-sm">
-                  {developer.country}
+                  {developer?.country}
                 </p>
               </div>
             </div>
             <div className="flex w-fit ml-1 bg-white px-3 border-2 border-blue-700 rounded-xl space-x-1  opacity-70 items-center ">
               <AiFillThunderbolt className="text-blue-700" size={13} />
               <p className="text-blue-700 text-sm">
-                {developer.verified ? "verified" : ""}
+                {developer?.verified ? "verified" : ""}
               </p>
             </div>
           </div>
@@ -68,7 +68,7 @@ const ProfileCard = ({
                  {!like ?<AiOutlineHeart className="text-lime-600" />:<AiFillHeart className="text-lime-500" />}
             </div> */}
 
-            <Link href={`/profiles/${developer.slug.current}`}  onClick={(e) => {
+            <Link href={`/profiles/${developer?.slug.current}`}  onClick={(e) => {
                   e.stopPropagation();
                 }}>
               <div
@@ -116,12 +116,8 @@ const ProfileCard = ({
             </p>
           </div>
         </div> */}
-        <div>
-          <p className="line-clamp-2 text-[15px] text-gray-700">
-            {developer.message}
-          </p>
-        </div>
-        <Skills skills={skills} />
+       
+        <Skills skills={skills} message={developer?.message} />
       </div>
       <Drawer
         // title="Drawer with extra actions"
