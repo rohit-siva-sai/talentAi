@@ -12,6 +12,7 @@ const client = createClient({
   projectId: "qkq2pa17",
   dataset: "production",
   useCdn: false,
+  apiVersion: '2023-02-03'
  
 });
 
