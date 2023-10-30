@@ -55,10 +55,12 @@ const array = [
 
 const BrowseTalent = () => {
 
-  const [allProfiles, filterByCategory] = profileFilter((store) => [
-    store.allProfiles,
+  const [profiles, filterByCategory] = profileFilter((store) => [
+    store.profiles,
     store.filterByCategory,
   ]);
+  console.log(profiles);
+  
 
   return (
     <div className="md:px-48 px-4 pt-6 pb-10">
@@ -72,7 +74,7 @@ const BrowseTalent = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 md:gap-x-6 gap-y-4 md:gap-y-6 align-middle mt-10  ">
         {array.map((item) => {
           return (
-            <Link href={"/sanityProfile"} className="bg-slate-50 pl-2 md:pl-4 pt-4 pb-12 rounded-lg hover:shadow-md transition-shadow duration-300 "   >
+            <Link href={"/profiles"} className="bg-slate-50 pl-2 md:pl-4 pt-4 pb-12 rounded-lg hover:shadow-md transition-shadow duration-300 "   >
               <div onClick={()=>{filterByCategory(item.category)}} >
                 <p className="text-base font-semibold text-gray-800">{item.category}</p>
                 <div className="flex space-x-6 items-center mt-3 text-gray-500 text-sm">

@@ -44,9 +44,9 @@ const WorkExperience = ({ workExperience }) => {
                           border: "2px solid #9bda92",
                         }}
                         layout={"2-column"}
-                        // contentArrowStyle={{
-                        //   borderRight: "7px solid  rgb(33, 150, 243)",
-                        // }}
+                        contentArrowStyle={{
+                          borderRight: "7px solid #9bda92 ",
+                        }}
 
                         iconStyle={{
                           background: "#74e663",

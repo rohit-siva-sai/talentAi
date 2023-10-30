@@ -24,7 +24,7 @@ const userDetails = {
   headquarters: "",
 };
 const Download = () => {
-  const [updateUser, setUpdateUser] = useState(userDetails);
+  const [updateUser, setUpdateUser] = useState(userDetails)
   const [success,setSuccess] = useState(false)
 
   const userCollection = collection(db, "users");
@@ -61,7 +61,7 @@ const Download = () => {
     } else if (e.target.name == "headquarters")
       setUpdateUser((prev) => ({ ...prev, headquarters: e.target.value }));
   };
-  console.log("eee", updateUser);
+  // console.log("eee", updateUser);
 
   return (
     <div

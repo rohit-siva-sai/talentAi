@@ -24,7 +24,7 @@ const UserProfile = ({ developer, skills }) => {
 
   return (
     <div className="md:mx-48 mx-4 mb-12 mt-4 ">
-      <Link href={"/sanityProfile"}>
+      <Link href={"/profiles"}>
         <RiArrowLeftCircleLine size={30} className="my-4" />
       </Link>
       <div className="flex flex-col space-y-6">

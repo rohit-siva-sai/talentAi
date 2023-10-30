@@ -1,6 +1,7 @@
 import React from 'react'
 import CategoryFilter from './categoryFilter'
 import SkillFilter from './skillFilter'
+import ExperienceFilter from './experienceFilter'
 
 const ApplyFilter = ({filterDeveloper}) => {
   return (
@@ -8,6 +9,7 @@ const ApplyFilter = ({filterDeveloper}) => {
     <p className="font-semibold text-gray-600 text-lg mb-4">Filter By</p>
     <div className="flex flex-col space-y-2">
    <CategoryFilter filterDeveloper={filterDeveloper} />
+   <ExperienceFilter/>
     <SkillFilter filterDeveloper={filterDeveloper}  />
     </div>
   </div>

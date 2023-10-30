@@ -30,7 +30,7 @@ const Navbar = () => {
                   NewsLetter
                 </div>
               </Link>
-              <Link href={"/sanityProfile"}>
+              <Link href={"/profiles"}>
                 <div className="font-light  text-[13px] md:text-base cursor-pointer hover:underline  underline-offset-8 transition-all duration-300 decoration-blue-500 decoration-2">
                   Apply for Job
                 </div>

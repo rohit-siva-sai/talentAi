@@ -24,10 +24,10 @@ export default function Home() {
     <div className="min-h-screen">
       
       <Workforce />
+      <Colleagues/>
       <BrowseTalent />
       <WorkGame />
       <HowItWorks/>
-      <Colleagues/>
       <Partners />
       <Stepbystep />
       <Faqs/>

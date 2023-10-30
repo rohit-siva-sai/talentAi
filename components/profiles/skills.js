@@ -7,7 +7,7 @@ const Skills = ({ skills, size = null,message }) => {
   return (
     <div className="flex flex-col space-y-4">
       <div>
-        <div className="flex items-center space-x-2 pr-8 px-3 py-1 rounded-br-full justify-center mb-2 bg-gray-800 w-fit  ">
+        <div className="flex items-center space-x-2 pr-8 px-3 py-1 rounded-md justify-center mb-2 bg-gray-800 w-fit  ">
           <RiStarFill className="text-yellow-400" />
           <p className="text-white  text-sm font-semibold ">Expert in</p>
         </div>
