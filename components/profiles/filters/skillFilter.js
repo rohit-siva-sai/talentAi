@@ -47,8 +47,8 @@ const SkillFilter = ({ filterDeveloper }) => {
 
   const [allSkills, setAllSkills] = useState(skills);
 
-  const [allProfiles, filterBySkill, updateProfiles] = profileFilter(
-    (store) => [store.allProfiles, store.filterBySkill, store.updateProfiles]
+  const [allProfiles,profiles, filterBySkill, updateProfiles,tempProfiles] = profileFilter(
+    (store) => [store.allProfiles,store.profiles, store.filterBySkill, store.updateProfiles,store.tempProfiles]
   );
 
   // console.log("all", allProfiles);
@@ -59,7 +59,7 @@ const SkillFilter = ({ filterDeveloper }) => {
   const [selectedSkills, setSelectedSkills] = useState([]);
 
   const filterSearch = (value) => {
-    let tempProducts = allProfiles;
+    // let tempProducts = allProfiles;
     if (value.length > 2) {
       // list = allProfiles.filter((curElement) => {
       //   return (
@@ -82,7 +82,7 @@ const SkillFilter = ({ filterDeveloper }) => {
       // console.log("temp", tempProducts);
 
 
-      const list = allProfiles.filter((item) => {
+      const list = tempProfiles.filter((item) => {
         let z = [];
         item.skills.map((user) => {
           z = z.concat(user.skill);
@@ -114,12 +114,12 @@ const SkillFilter = ({ filterDeveloper }) => {
 
       // updateProfiles(list);
     } else {
-      updateProfiles(allProfiles);
+      updateProfiles(tempProfiles);
     }
   };
 
   const filterSkill = (value) => {
-    let updatedList = allProfiles;
+    let updatedList = tempProfiles
     const skillList = allSkills;
     const skillChecked = skillList.map((item) =>
       item.value === value ? { ...item, checked: !item.checked } : item
@@ -165,7 +165,7 @@ const SkillFilter = ({ filterDeveloper }) => {
     // });
 
     if (skillsChecked.length >= 1) {
-      const list = allProfiles.filter((item) => {
+      const list = updatedList.filter((item) => {
         let z = [];
         item.skills.map((user) => {
           z = z.concat(user.skill);
@@ -195,7 +195,7 @@ const SkillFilter = ({ filterDeveloper }) => {
 
       updateProfiles(list);
     } else {
-      updateProfiles(allProfiles);
+      updateProfiles(tempProfiles);
     }
 
     // const data = allProfiles.filter((item) =>
@@ -295,7 +295,7 @@ const SkillFilter = ({ filterDeveloper }) => {
           //   filterSkill(item.value.toLowerCase());
           // }}
           onClick={() => {
-            updateProfiles(allProfiles);
+            updateProfiles(tempProfiles);
             const f = allSkills.map((item) =>
               item.checked ? { ...item, checked: !item.checked } : item
             );

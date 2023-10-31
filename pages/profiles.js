@@ -31,14 +31,16 @@ export const getServerSideProps = async (context) => {
 const Profiles = ({ developersData }) => {
   // console.log("profiels", developersData);
   const router = useRouter()
-  const [profiles, updateProfiles,updateAllProfiles] = profileFilter((store) => [
+  const [profiles, updateProfiles,updateAllProfiles,updateTempProfiles] = profileFilter((store) => [
     store.profiles,
     store.updateProfiles,
     store.updateAllProfiles,
+    store.updateTempProfiles
   ]);
   useEffect(() => {
     updateProfiles(developersData);
     updateAllProfiles(developersData);
+    updateTempProfiles(developersData)
   }, [router]);
   // console.log("prod", profiles);
 

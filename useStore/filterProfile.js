@@ -3,7 +3,7 @@ import { persist } from "zustand/middleware";
 
 const filterProfile = (set) => ({
   profiles: [],
-  temp: [],
+  tempProfiles: [],
   allProfiles: [],
   titleActive: "",
   newRfq: 0,
@@ -11,13 +11,18 @@ const filterProfile = (set) => ({
 
   updateProfiles: async (value) => set((store) => ({ profiles: value })),
   updateAllProfiles: async (value) => set((store) => ({ allProfiles: value })),
+  updateTempProfiles: async (value) =>
+    set((store) => ({ tempProfiles: value })),
   filterByCategory: async (value) =>
     set((store) => ({
       profiles:
         value == "All categories"
           ? store.allProfiles
           : store.allProfiles.filter((item) => item.role.includes(value)),
-      temp: store.profiles,
+      tempProfiles:
+        value == "All categories"
+          ? store.allProfiles
+          : store.allProfiles.filter((item) => item.role.includes(value)),
     })),
   filterBySkill: async (value) =>
     set((store) => ({
@@ -30,7 +35,7 @@ const filterProfile = (set) => ({
               );
             }),
     })),
-  
+
   updateNewRfq: async (value) => set((store) => ({ newRfq: Math.random() })),
   updateChangeUser: async (value) =>
     set((store) => ({ changeUser: Math.random() })),

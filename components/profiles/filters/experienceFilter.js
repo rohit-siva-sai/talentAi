@@ -24,22 +24,26 @@ const experience = [
 const ExperienceFilter = () => {
   const [showExp, setShowExp] = useState(false);
   const [present, setPresent] = useState(0);
-  const [allProfiles, filterByCategory, updateProfiles] = profileFilter(
-    (store) => [store.allProfiles, store.filterByCategory, store.updateProfiles]
+  const [allProfiles,profiles,tempProfiles ,filterByCategory, updateProfiles,updateTempProfiles] = profileFilter(
+    (store) => [store.allProfiles,store.profiles,store.tempProfiles, store.filterByCategory, store.updateProfiles,store.updateTempProfiles]
   );
-
   const filterByExp = (value) => {
-    let list = allProfiles
+    console.log('temp',tempProfiles);
+    
+    let list = tempProfiles
     if (value == "Beginner")
-      list = allProfiles.filter((item) => item.experience < 3);
+      list = tempProfiles.filter((item) => item.experience < 3);
     else if (value == "Intermediate")
-      list = allProfiles.filter(
-        (item) => item.experience >= 3 && item.experience < 5
+      list = tempProfiles.filter(
+        (item) => (item.experience < 5  &&  item.experience >=3 )
       );
     else if (value == "Advanced")
-      list = allProfiles.filter((item) => item.experience >= 5);
-
-    updateProfiles(list);
+      list = tempProfiles.filter((item) => item.experience >= 5);
+    else
+        list  = tempProfiles
+    // updateTempProfiles(list)
+    updateProfiles(list)
+    
   };
 
   return (
