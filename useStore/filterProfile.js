@@ -8,6 +8,7 @@ const filterProfile = (set) => ({
   titleActive: "",
   newRfq: 0,
   changeUser: 0,
+  category: "All categories",
 
   updateProfiles: async (value) => set((store) => ({ profiles: value })),
   updateAllProfiles: async (value) => set((store) => ({ allProfiles: value })),
@@ -23,6 +24,7 @@ const filterProfile = (set) => ({
         value == "All categories"
           ? store.allProfiles
           : store.allProfiles.filter((item) => item.role.includes(value)),
+          category: value
     })),
   filterBySkill: async (value) =>
     set((store) => ({

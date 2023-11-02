@@ -31,6 +31,7 @@ const ExperienceFilter = () => {
     filterByCategory,
     updateProfiles,
     updateTempProfiles,
+    category,
   ] = profileFilter((store) => [
     store.allProfiles,
     store.profiles,
@@ -38,23 +39,40 @@ const ExperienceFilter = () => {
     store.filterByCategory,
     store.updateProfiles,
     store.updateTempProfiles,
+    store.category,
   ]);
   const filterByExp = (value) => {
-    console.log("temp", tempProfiles);
+    // console.log("temp", tempProfiles);
 
     let list = tempProfiles;
-    if (value == "Beginner") {
-      list = tempProfiles.filter((item) => item.experience < 3);
-      list.length > 0 && updateTempProfiles(list);
-    } else if (value == "Intermediate") {
-      list = tempProfiles.filter(
-        (item) => item.experience < 5 && item.experience >= 3
-      );
-      list.length > 0 && updateTempProfiles(list);
-    } else if (value == "Advanced") {
-      list = tempProfiles.filter((item) => item.experience >= 5);
-      list.length > 0 && updateTempProfiles(list)
-    } else list = tempProfiles;
+    if (category == "All categories") {
+      if (value == "Beginner") {
+        list = allProfiles.filter((item) => item.experience < 3);
+        list.length > 0 && updateTempProfiles(list);
+      } else if (value == "Intermediate") {
+        list = allProfiles.filter(
+          (item) => item.experience < 5 && item.experience >= 3
+        );
+        list.length > 0 && updateTempProfiles(list);
+      } else if (value == "Advanced") {
+        list = allProfiles.filter((item) => item.experience >= 5);
+        list.length > 0 && updateTempProfiles(list);
+      } else list = allProfiles;
+    } else {
+      if (value == "Beginner") {
+        list = tempProfiles.filter((item) => item.experience < 3);
+        list.length > 0 && updateTempProfiles(list);
+      } else if (value == "Intermediate") {
+        list = tempProfiles.filter(
+          (item) => item.experience < 5 && item.experience >= 3
+        );
+        list.length > 0 && updateTempProfiles(list);
+      } else if (value == "Advanced") {
+        list = tempProfiles.filter((item) => item.experience >= 5);
+        list.length > 0 && updateTempProfiles(list);
+      } else list = tempProfiles;
+    }
+
     // updateTempProfiles(list)
     updateProfiles(list);
   };
