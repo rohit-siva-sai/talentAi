@@ -24,26 +24,39 @@ const experience = [
 const ExperienceFilter = () => {
   const [showExp, setShowExp] = useState(false);
   const [present, setPresent] = useState(0);
-  const [allProfiles,profiles,tempProfiles ,filterByCategory, updateProfiles,updateTempProfiles] = profileFilter(
-    (store) => [store.allProfiles,store.profiles,store.tempProfiles, store.filterByCategory, store.updateProfiles,store.updateTempProfiles]
-  );
+  const [
+    allProfiles,
+    profiles,
+    tempProfiles,
+    filterByCategory,
+    updateProfiles,
+    updateTempProfiles,
+  ] = profileFilter((store) => [
+    store.allProfiles,
+    store.profiles,
+    store.tempProfiles,
+    store.filterByCategory,
+    store.updateProfiles,
+    store.updateTempProfiles,
+  ]);
   const filterByExp = (value) => {
-    console.log('temp',tempProfiles);
-    
-    let list = tempProfiles
-    if (value == "Beginner")
+    console.log("temp", tempProfiles);
+
+    let list = tempProfiles;
+    if (value == "Beginner") {
       list = tempProfiles.filter((item) => item.experience < 3);
-    else if (value == "Intermediate")
+      list.length > 0 && updateTempProfiles(list);
+    } else if (value == "Intermediate") {
       list = tempProfiles.filter(
-        (item) => (item.experience < 5  &&  item.experience >=3 )
+        (item) => item.experience < 5 && item.experience >= 3
       );
-    else if (value == "Advanced")
+      list.length > 0 && updateTempProfiles(list);
+    } else if (value == "Advanced") {
       list = tempProfiles.filter((item) => item.experience >= 5);
-    else
-        list  = tempProfiles
+      list.length > 0 && updateTempProfiles(list)
+    } else list = tempProfiles;
     // updateTempProfiles(list)
-    updateProfiles(list)
-    
+    updateProfiles(list);
   };
 
   return (

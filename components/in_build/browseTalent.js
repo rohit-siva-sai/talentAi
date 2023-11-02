@@ -59,7 +59,7 @@ const BrowseTalent = () => {
     store.profiles,
     store.filterByCategory,
   ]);
-  console.log(profiles);
+  // console.log(profiles);
   
 
   return (
