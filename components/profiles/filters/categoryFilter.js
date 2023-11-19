@@ -59,7 +59,7 @@ const category = [
 ];
 
 const CategoryFilter = ({ CategoryFilter, filterDeveloper }) => {
-  const [showCategory, setShowCategory] = useState(false);
+  const [showCategory, setShowCategory] = useState(true);
   const [present, setPresent] = useState(0);
   const [allProfiles, filterByCategory] = profileFilter((store) => [
     store.allProfiles,

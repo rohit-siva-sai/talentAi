@@ -47,7 +47,7 @@ const HowItWorks = () => {
 
       <Link href={"/profiles"}>
         <div
-          className="px-10 mt-12 md:px-12 cursor-pointer mx-auto md:mx-auto w-fit text-white  bg-lime-600 rounded-md
+          className="px-10 mt-12 md:px-12 cursor-pointer mx-auto md:mx-auto w-fit text-white  bg-blue-500 rounded-md
              py-2 text-sm md:text-base font-medium hover:opacity-90"
         >
           Hire Developers

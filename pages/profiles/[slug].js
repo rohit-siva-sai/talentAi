@@ -1,6 +1,8 @@
 import Explore from "@/components/profiles/explore";
+import ProfileCard from "@/components/profiles/profileCard";
 import BasicInfo from "@/components/profiles/slug/basicInfo";
 import Education from "@/components/profiles/slug/education";
+import ProfileSlugCard from "@/components/profiles/slug/profileSlugCard";
 import ProjectHistory from "@/components/profiles/slug/projectHistory";
 import WorkExperience from "@/components/profiles/slug/workExperience";
 
@@ -28,7 +30,9 @@ const UserProfile = ({ developer, skills }) => {
         <RiArrowLeftCircleLine size={30} className="my-4" />
       </Link>
       <div className="flex flex-col space-y-6">
-        <BasicInfo developer={developer} skills={skills} />
+        
+        <ProfileSlugCard developer={developer} skills={skills}/>
+        
         <WorkExperience workExperience={developer.workExperience} />
         <ProjectHistory projectHistory={developer.projectHistory} />
         <Education education={developer.education} />

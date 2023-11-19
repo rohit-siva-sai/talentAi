@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { TbEdit,TbMessageStar } from "react-icons/tb";
+import { TbEdit, TbMessageStar } from "react-icons/tb";
 import { AiFillStar } from "react-icons/ai";
 import { BsPinAngle } from "react-icons/bs";
 
@@ -62,10 +62,10 @@ const WorkGame = () => {
           <div className="flex space-x-3 md:space-x-6 mt-6">
             <Link href={""}>
               <div
-               className="px-8 md:px-10 cursor-pointer mx-auto md:mx-0 w-fit text-white  bg-lime-600 rounded-md
-               py-2 text-sm hover:opacity-90"
+                className="px-10 md:px-12 cursor-pointer mx-auto md:mx-0 w-fit text-white  bg-blue-500 rounded-md
+             py-2 text-sm hover:opacity-90"
               >
-                Sign up for free
+                Hire now
               </div>
             </Link>
             <Link href={""}>
