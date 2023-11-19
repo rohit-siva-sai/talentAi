@@ -29,7 +29,7 @@ const Explore = ({ developer, skills }) => {
               className="px-4 md:px-4 cursor-pointer border border-lime-500 mx-auto md:mx-0 w-fit text-lime-700  hover:text-white  hover:bg-lime-600 rounded-md
              py-1 text-sm hover:opacity-90"
             >
-              Hire now
+              Hire {developer?.username}
             </div>
           </Link>
           </div>
