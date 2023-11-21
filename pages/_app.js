@@ -1,5 +1,6 @@
 import Footer from "@/components/in_build/footer";
 import Navbar from "@/components/in_build/navbar";
+import { Analytics } from '@vercel/analytics/react';
 // import Navbar from "@/components/home/navbar";
 import "@/styles/globals.css";
 import { profileFilter } from "@/useStore/filterProfile";
@@ -39,6 +40,7 @@ export default function App({ Component, pageProps }) {
       {navShow && <Navbar />}
       <Component {...pageProps} />
       <Footer />
+      <Analytics />
     </>
   );
 }
